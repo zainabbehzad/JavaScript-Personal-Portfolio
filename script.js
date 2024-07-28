@@ -65,170 +65,165 @@ hireMeButton.addEventListener('mouseleave', () => {
 homeSection.appendChild(hireMeButton);
 // About section
 const aboutSection = document.getElementById('about');
-    // Create the "MORE ABOUT ME" button
-    const moreAboutMeButton = document.createElement('button');
-    moreAboutMeButton.classList.add('about-me-button');
-    moreAboutMeButton.textContent = 'ABOUT ME';
-    aboutSection.appendChild(moreAboutMeButton);
+// Create the "MORE ABOUT ME" button
+const moreAboutMeButton = document.createElement('button');
+moreAboutMeButton.classList.add('about-me-button');
+moreAboutMeButton.textContent = 'ABOUT ME';
+aboutSection.appendChild(moreAboutMeButton);
 
-    // Create the HR element and insert it within the aboutSection
-    var hr = document.createElement("hr");
-    aboutSection.appendChild(hr);
+// Create the HR element and insert it within the aboutSection
+let hr = document.createElement('hr');
+aboutSection.appendChild(hr);
 
-    // Create the container div for the "MORE ABOUT ME" content
-    const moreAboutMeContainer = document.createElement('div');
-    moreAboutMeContainer.classList.add('more-about-me-container');
-    moreAboutMeContainer.style.display = 'none';
-    aboutSection.appendChild(moreAboutMeContainer);
+// Create the container div for the "MORE ABOUT ME" content
+const moreAboutMeContainer = document.createElement('div');
+moreAboutMeContainer.classList.add('more-about-me-container');
+moreAboutMeContainer.style.display = 'none';
+aboutSection.appendChild(moreAboutMeContainer);
 
-    // Create the "MORE ABOUT ME" paragraph
-    const moreAboutMeText = document.createElement('p');
-    moreAboutMeText.classList.add('more-about-me-text');
-    moreAboutMeText.innerHTML = `
-    <strong>Hi, I'm Zainab Behzad!</strong> I'm a passionate front-end web developer with a strong background in creating clean, responsive, and interactive web experiences.<br>
+// Create the "MORE ABOUT ME" paragraph
+const moreAboutMeText = document.createElement('p');
+moreAboutMeText.classList.add('more-about-me-text');
+moreAboutMeText.innerHTML = `
+<strong>Hi, I'm Zainab Behzad!</strong> I'm a passionate front-end web developer with a strong background in creating clean, responsive, and interactive web experiences.<br>
 
-    Ever since I was a child, I've been fascinated by the world of technology and the endless possibilities it presents. This led me to pursue a degree in Computer Science, where I honed my skills in programming, problem-solving, and design.<br>
+Ever since I was a child, I've been fascinated by the world of technology and the endless possibilities it presents. This led me to pursue a degree in Computer Science, where I honed my skills in programming, problem-solving, and design.<br>
 
-    During my studies, I discovered a particular love for front-end development. I find immense joy in crafting visually stunning interfaces, bringing them to life with smooth animations and intuitive user interactions. My goal is to create websites and web applications that not only look great but also provide a seamless and enjoyable user experience.<br>
+During my studies, I discovered a particular love for front-end development. I find immense joy in crafting visually stunning interfaces, bringing them to life with smooth animations and intuitive user interactions. My goal is to create websites and web applications that not only look great but also provide a seamless and enjoyable user experience.<br>
 
-    In addition to my technical expertise, I'm also a strong believer in continuous learning and staying up-to-date with the latest trends and best practices in web development. I'm constantly exploring new technologies, frameworks, and techniques to enhance my skillset and deliver even better solutions for my clients.<br>
+In addition to my technical expertise, I'm also a strong believer in continuous learning and staying up-to-date with the latest trends and best practices in web development. I'm constantly exploring new technologies, frameworks, and techniques to enhance my skillset and deliver even better solutions for my clients.<br>
 
-    Beyond my professional life, I'm a passionate traveler and an avid reader. I love exploring different cultures, immersing myself in diverse experiences, and broadening my perspectives. In my free time, you'll often find me curled up with a good book, planning my next adventure, or engaging in outdoor activities.<br>
+Beyond my professional life, I'm a passionate traveler and an avid reader. I love exploring different cultures, immersing myself in diverse experiences, and broadening my perspectives. In my free time, you'll often find me curled up with a good book, planning my next adventure, or engaging in outdoor activities.<br>
 
-    I'm excited to bring my expertise and enthusiasm to your next project. Let's work together to create something truly remarkable!
-    `;
-    moreAboutMeContainer.appendChild(moreAboutMeText);
+I'm excited to bring my expertise and enthusiasm to your next project. Let's work together to create something truly remarkable!
+`;
+moreAboutMeContainer.appendChild(moreAboutMeText);
 
-    // Create the close button
-    const closeButton = document.createElement('button');
-    closeButton.classList.add('close-button');
-    closeButton.textContent = 'Close';
+// Create the close button
+const closeButton = document.createElement('button');
+closeButton.classList.add('close-button');
+closeButton.textContent = 'Close';
 
-    // Add a click event listener to the close button
-    closeButton.addEventListener('click', () => {
-      moreAboutMeContainer.style.display = 'none';
-    });
+// Add a click event listener to the close button
+closeButton.addEventListener('click', () => {
+  moreAboutMeContainer.style.display = 'none';
+});
 
-    // Add the close button to the container
-    moreAboutMeContainer.appendChild(closeButton);
+// Add the close button to the container
+moreAboutMeContainer.appendChild(closeButton);
 
-    // Add a click event listener to the "MORE ABOUT ME" button
-    moreAboutMeButton.addEventListener('click', () => {
-      moreAboutMeContainer.style.display = 'block';
-      moreAboutMeContainer.style.position = 'fixed';
-      moreAboutMeContainer.style.top = '50%';
-      moreAboutMeContainer.style.left = '50%';
-      moreAboutMeContainer.style.transform = 'translate(-50%, -50%)';
-      moreAboutMeContainer.style.width = '80%';
-      moreAboutMeContainer.style.maxHeight = '80%';
-      moreAboutMeContainer.style.backgroundColor = '#f5f5f5';
-      moreAboutMeContainer.style.padding = '2rem';
-      moreAboutMeContainer.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.3)';
-    });
+// Add a click event listener to the "MORE ABOUT ME" button
+moreAboutMeButton.addEventListener('click', () => {
+  moreAboutMeContainer.style.display = 'block';
+  moreAboutMeContainer.style.position = 'fixed';
+  moreAboutMeContainer.style.top = '50%';
+  moreAboutMeContainer.style.left = '50%';
+  moreAboutMeContainer.style.transform = 'translate(-50%, -50%)';
+  moreAboutMeContainer.style.width = '80%';
+  moreAboutMeContainer.style.maxHeight = '80%';
+  moreAboutMeContainer.style.backgroundColor = '#f5f5f5';
+  moreAboutMeContainer.style.padding = '2rem';
+  moreAboutMeContainer.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.3)';
+});
 
-  
-
-
-
-
-    const certificateData = [
-      {
-        title: 'Responsive Web Design "HTML, CSS"',
-        date: 'June 1, 2024',
-        link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
-        image: 'images/Responsive Web Design certificate.png.png'
+const certificateData = [
+  {
+    title: 'Responsive Web Design "HTML, CSS"',
+    date: 'June 1, 2024',
+    link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
+    image: 'images/Responsive Web Design certificate.png.png',
       },
       {
         title: 'JS Algorithms and Data Structures',
         date: 'July 11, 2024',
         link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
-        image: 'images/JS certificate.png.png'
-      }
-    ];
+        image: 'images/JS certificate.png.png',
+  },
+];
 
-    // Function to create the certificates section
-    function createCertificatesSection() {
-      const certificatesSection = document.getElementById('certificatesSection');
-      const sectionElement = document.createElement('section');
-      sectionElement.classList.add('certificates-section');
+// Function to create the certificates section
+function createCertificatesSection() {
+  const certificatesSection = document.getElementById('certificatesSection');
+  const sectionElement = document.createElement('section');
+  sectionElement.classList.add('certificates-section');
 
-      const titleElement = document.createElement('h2');
-      titleElement.textContent = 'Certifications';
-      sectionElement.appendChild(titleElement);
+  const titleElement = document.createElement('h2');
+  titleElement.textContent = 'Certifications';
+  sectionElement.appendChild(titleElement);
 
-      const certificatesContainer = document.createElement('div');
-      certificatesContainer.classList.add('certificates-container');
-      sectionElement.appendChild(certificatesContainer);
+  const certificatesContainer = document.createElement('div');
+  certificatesContainer.classList.add('certificates-container');
+  sectionElement.appendChild(certificatesContainer);
 
-      certificateData.forEach(certificate => {
-        const certificateElement = document.createElement('div');
-        certificateElement.classList.add('certificate');
+  certificateData.forEach((certificate) => {
+    const certificateElement = document.createElement('div');
+    certificateElement.classList.add('certificate');
 
-        const titleElement = document.createElement('h3');
-        titleElement.textContent = certificate.title;
-        certificateElement.appendChild(titleElement);
+    const titleElement = document.createElement('h3');
+    titleElement.textContent = certificate.title;
+    certificateElement.appendChild(titleElement);
 
-        const dateElement = document.createElement('p');
-        dateElement.textContent = certificate.date;
-        certificateElement.appendChild(dateElement);
+    const dateElement = document.createElement('p');
+    dateElement.textContent = certificate.date;
+    certificateElement.appendChild(dateElement);
 
-        const linkElement = document.createElement('a');
-        linkElement.href = certificate.link;
-        linkElement.target = '_blank';
+    const linkElement = document.createElement('a');
+    linkElement.href = certificate.link;
+    linkElement.target = '_blank';
 
-        const imageElement = document.createElement('img');
-        imageElement.src = certificate.image;
-        imageElement.alt = 'Certificate';
-        linkElement.appendChild(imageElement);
-        certificateElement.appendChild(linkElement);
+    const imageElement = document.createElement('img');
+    imageElement.src = certificate.image;
+    imageElement.alt = 'Certificate';
+    linkElement.appendChild(imageElement);
+    certificateElement.appendChild(linkElement);
 
-        certificatesContainer.appendChild(certificateElement);
+    certificatesContainer.appendChild(certificateElement);
 
         linkElement.addEventListener('click', () => {
-          showCertificateModal(certificate);
-        });
-      });
+      showCertificateModal(certificate);
+    });
+  });
 
-      // Add the "Download my resume" button
-      const resumeButton = document.createElement('button');
-      resumeButton.classList.add('resume-button');
-      resumeButton.textContent = 'Download my resume';
-      sectionElement.appendChild(resumeButton);
+  // Add the "Download my resume" button
+  const resumeButton = document.createElement('button');
+  resumeButton.classList.add('resume-button');
+  resumeButton.textContent = 'Download my resume';
+  sectionElement.appendChild(resumeButton);
 
-      certificatesSection.appendChild(sectionElement);
-    }
+  certificatesSection.appendChild(sectionElement);
+}
 
-    // Function to create the certificate modal
-    function showCertificateModal(certificate) {
-      const modal = document.getElementById('certificateModal');
-      const modalContent = document.getElementById('modalContent');
-      modalContent.innerHTML = "";
+// Function to create the certificate modal
+function showCertificateModal(certificate) {
+  const modal = document.getElementById('certificateModal');
+  const modalContent = document.getElementById('modalContent');
+  modalContent.innerHTML = '';
 
-      const titleElement = document.createElement('h2');
-      titleElement.textContent = certificate.title;
-      modalContent.appendChild(titleElement);
+  const titleElement = document.createElement('h2');
+  titleElement.textContent = certificate.title;
+  modalContent.appendChild(titleElement);
 
-      const dateElement = document.createElement('p');
-      dateElement.textContent = certificate.date;
-      modalContent.appendChild(dateElement);
+  const dateElement = document.createElement('p');
+  dateElement.textContent = certificate.date;
+  modalContent.appendChild(dateElement);
 
-      const linkElement = document.createElement('a');
-      linkElement.href = certificate.link;
-      linkElement.target = '_blank';
+  const linkElement = document.createElement('a');
+  linkElement.href = certificate.link;
+  linkElement.target = '_blank';
 
-      const imageElement = document.createElement('img');
-      imageElement.src = certificate.image;
-      imageElement.alt = 'Certificate';
-      imageElement.style.maxWidth = '100%';
-      imageElement.style.height = 'auto';
-      linkElement.appendChild(imageElement);
-      modalContent.appendChild(linkElement);
+  const imageElement = document.createElement('img');
+  imageElement.src = certificate.image;
+  imageElement.alt = 'Certificate';
+  imageElement.style.maxWidth = '100%';
+  imageElement.style.height = 'auto';
+  linkElement.appendChild(imageElement);
+  modalContent.appendChild(linkElement);
 
-      modal.style.display = 'block';
+  modal.style.display = 'block';
 
-      const closeButton = document.querySelector('.close');
-      closeButton.addEventListener('click', () => {
-        modal.style.display = 'none';
+  const closeButton = document.querySelector('.close');
+  closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
   });
 
   window.addEventListener('click', (event) => {
@@ -469,7 +464,7 @@ loadFormData();
 
 // Save form data to local storage on input change
 nameInput.addEventListener('input', saveFormData);
-emailInput.addEventListener('input', function() {
+emailInput.addEventListener('input', function () {
   let currentValue = this.value;
   let newChar = currentValue.charAt(currentValue.length - 1);
 
@@ -507,7 +502,7 @@ function validateForm() {
   if (emailInput.value !== emailInput.value.toLowerCase()) {
     isValid = false;
     errorMessage.textContent = 'Email must be in lowercase.';
-  } else if (!/^\w+([\.-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/.test(emailInput.value)) {
+  } else if (!/^\w+([\.-]?w+)*@\w+([-]?\w+)*(\w{2,3})+$/.test(emailInput.value)) {
     isValid = false;
     errorMessage.textContent = 'Invalid email address.';
   } else {
@@ -537,24 +532,24 @@ function loadFormData() {
   }
 }
 // Create the Instagram link
-const instagramLink = document.createElement("a");
-instagramLink.href = "https://www.instagram.com/z_behzad_?igsh=a2ZuejVsZGp2a2pt";
-const instagramIcon = document.createElement("i");
-instagramIcon.classList.add("fa-brands", "fa-instagram");
+const instagramLink = document.createElement('a');
+instagramLink.href = 'https://www.instagram.com/z_behzad_?igsh=a2ZuejVsZGp2a2pt';
+const instagramIcon = document.createElement('i');
+instagramIcon.classList.add('fa-brands', 'fa-instagram');
 instagramLink.appendChild(instagramIcon);
 
 // Create the LinkedIn link
-const linkedinLink = document.createElement("a");
-linkedinLink.href = "https://www.linkedin.com/in/zainab-behzad-3126692b5";
-const linkedinIcon = document.createElement("i");
-linkedinIcon.classList.add("fa-brands", "fa-linkedin");
+const linkedinLink = document.createElement('a');
+linkedinLink.href = 'https://www.linkedin.com/in/zainab-behzad-3126692b5';
+const linkedinIcon = document.createElement('i');
+linkedinIcon.classList.add('fa-brands', 'fa-linkedin');
 linkedinLink.appendChild(linkedinIcon);
 
 // Create the GitHub link
-const githubLink = document.createElement("a");
-githubLink.href = "https://github.com/zainabbehzad";
-const githubIcon = document.createElement("i");
-githubIcon.classList.add("fa-brands", "fa-square-github");
+const githubLink = document.createElement('a');
+githubLink.href = 'https://github.com/zainabbehzad';
+const githubIcon = document.createElement('i');
+githubIcon.classList.add('fa-brands', 'fa-square-github');
 githubLink.appendChild(githubIcon);
 
 // Append the links to the container
