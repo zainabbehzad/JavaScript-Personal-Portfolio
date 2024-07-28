@@ -13,7 +13,7 @@
 }
 
 * {
-  background-color: #e9e9e9S;
+  background-color: #e9e9e9;
 }
 
 body {
@@ -46,15 +46,14 @@ body {
   width: 60px;
   height: 50px;
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 20px;
   z-index: 999;
   background-color: transparent;
-  padding: 0;
 }
 
 #hamburger-menu .icon {
-  color: #000000;
+  color: #000;
   width: 40px;
   height: 40px;
   transition: all 0.3s ease;
@@ -62,7 +61,7 @@ body {
 
 #hamburger-menu.open .icon {
   background-color: #175089;
-  color: #000000;
+  color: #000;
   width: 45px;
   height: 25px;
   padding-top: 14px;
@@ -71,7 +70,7 @@ body {
 
 #mobile-menu {
   list-style-type: none;
-  background-color: #6D8FB1;
+  background-color: #6d8fb1;
   padding: 20px;
   position: absolute;
   top: 48px; /* Align the menu to the bottom of the navbar */
@@ -81,7 +80,7 @@ body {
 }
 
 #mobile-menu:hover {
-  background: #6D8FB1;
+  background: #6d8fb1;
   border: 2px solid #007bff;
 }
 
@@ -91,22 +90,21 @@ body {
 
 .menu-item {
   display: block;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   text-align: left;
   margin-bottom: 10px;
   padding: 5px;
-  background-color: #6D8FB1;
+  background-color: #6d8fb1;
 }
 
 .menu-item:hover {
-  background-color: #5A7B96;
+  background-color: #5a7b96;
 }
 
 .head-title {
   font-size: 24px;
 }
-
 
 .profile-image {
   width: 100%; /* Adjust the width as desired */
@@ -124,7 +122,7 @@ body {
   left: 138px;
   font-size: 16px;
   font-weight: bold;
-  color: #1E90FF;
+  color: #1e90ff;
   text-decoration: underline;
   display: inline-block;
   position: absolute;
@@ -148,7 +146,7 @@ body {
 }
 
 .container {
-  background-color: #E9E9E9;
+  background-color: #e9e9e9;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
@@ -162,16 +160,12 @@ body {
   width: 200px;
   height: 38px;
   bottom: 50%;
-  background-color:  #175089;
-  color: #FBFBFB;
+  background-color: #175089;
+  color: #fbfbfb;
   font-size: 16px;
   font-weight: 700;
   border: none;
   border-radius: 12px;
-}
-
-.hidden {
-  display: none;
 }
 
 .about {
@@ -180,7 +174,7 @@ body {
   align-items: center;
   text-align: center;
   top: 14.2%;
-  background-color: #E9E9E9;
+  background-color: #e9e9e9;
   padding: 40px 0;
   width: 100%;
   height: 47.92%;
@@ -198,10 +192,9 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #E9E9E9;
+  background-color: #e9e9e9;
   padding: 40px 0;
   width: 100%;
-  text-align: center;
   height: 47.92%;
 }
 
@@ -211,13 +204,10 @@ body {
   margin-bottom: 40px;
 }
 
-
 .home h2 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
-
-
 
 .hidden {
   position: fixed;
