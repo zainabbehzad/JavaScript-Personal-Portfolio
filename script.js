@@ -141,7 +141,7 @@ const aboutSection = document.getElementById('about');
       {
         title: 'JS Algorithms and Data Structures',
         date: 'July 11, 2024',
-        link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8",
+        link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
         image: 'images/JS certificate.png.png'
       }
     ];
