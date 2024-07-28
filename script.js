@@ -9,14 +9,14 @@ hamburgerMenu.addEventListener('click', () => {
   icon.classList.toggle('fa-times');
 });
 
-document.querySelectorAll("#mobile-menu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
+document.querySelectorAll('#mobile-menu a').forEach((link) => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
     hamburgerMenu.classList.remove('open');
     icon.classList.add('fa-bars');
     icon.classList.remove('fa-times');
-  })
-})
+  });
+});
 
 // Home section
 const homeSection = document.getElementById('home');
@@ -63,18 +63,13 @@ hireMeButton.addEventListener('mouseleave', () => {
 });
 
 homeSection.appendChild(hireMeButton);
-
-
-
 // About section
 const aboutSection = document.getElementById('about');
-
     // Create the "MORE ABOUT ME" button
     const moreAboutMeButton = document.createElement('button');
     moreAboutMeButton.classList.add('about-me-button');
     moreAboutMeButton.textContent = 'ABOUT ME';
     aboutSection.appendChild(moreAboutMeButton);
-
 
     // Create the HR element and insert it within the aboutSection
     var hr = document.createElement("hr");
