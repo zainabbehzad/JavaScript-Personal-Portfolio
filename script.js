@@ -3,7 +3,7 @@ const icon = document.querySelector('#hamburger-menu .icon');
 const mobileMenu = document.getElementById('mobile-menu');
 
 hamburgerMenu.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+  mobileMenu.classList.toggle('hide');
   hamburgerMenu.classList.toggle('open');
   icon.classList.toggle('fa-bars');
   icon.classList.toggle('fa-times');
@@ -11,7 +11,7 @@ hamburgerMenu.addEventListener('click', () => {
 
 document.querySelectorAll('#mobile-menu a').forEach((link) => {
   link.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.add('hide');
     hamburgerMenu.classList.remove('open');
     icon.classList.add('fa-bars');
     icon.classList.remove('fa-times');
@@ -252,7 +252,7 @@ function showDescription(item) {
   modal.classList.add('modal');
 
   var modalContent = document.createElement('div');
-  modalContent.classList.add('modal-content');
+  modalContent.classList.add('modal-object');
 
   var spanElement = document.createElement('span');
   spanElement.textContent = span.textContent;
