@@ -9,7 +9,6 @@ body {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-
   .side-navbar {
     display: none;
   }
@@ -44,7 +43,6 @@ body {
     z-index: 100;
     flex-direction: column;
     justify-content: right;
-    align-items: self-start;
     background-color: #7796b5;
     transition: top 1s ease;
     display: none;
@@ -733,35 +731,36 @@ body {
 
   #home {
     text-align: center;
-}
-.hire-me-button {
+  }
+
+  .hire-me-button {
     font-size: 24px;
     padding: 10px 20px;
-}
+  }
 
-.social-links-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  margin-bottom: 30px;
-}
+  .social-links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
 
-.social-links-container a {
-  color: #175089;
-  font-size: 50px;
-  text-decoration: none;
-  margin-right: 40px;
-}
+  .social-links-container a {
+    color: #175089;
+    font-size: 50px;
+    text-decoration: none;
+    margin-right: 40px;
+  }
 
-.social-links-container a:last-child {
-  margin-right: 0;
-}
+  .social-links-container a:last-child {
+    margin-right: 0;
+  }
 
-#contact-social-links {
-  margin-top: 60px;
-}
+  #contact-social-links {
+    margin-top: 60px;
+  }
 
   .signature {
     font-size: 16px;
@@ -1458,38 +1457,13 @@ body {
     width: 40px;
     height: 40px;
   }
-/*
-  .social-links {
+
+  #home-social-links {
+    display: none;
+  }
+
+  .social-links-container {
     display: grid;
-    justify-content: flex-end;
-    border-radius: 90px;
-    position: fixed;
-    bottom: 150px;
-    right: 20px;
-    z-index: 100;
-    width: 45px;
-    height: 330px;
-    background-color: #175089;
-    padding: 20px 0;
-  }
-
-  .social-links a {
-    color: #fff;
-    font-size: 30px;
-    text-decoration: none;
-    justify-content: center;
-    display: block;
-    margin-bottom: 15px;
-    margin-right: 10px;
-  }
-*/
-
-#home-social-links {
-  display: none;
-}
-
-.social-links-container {
-  display: grid;
     justify-content: flex-end;
     border-radius: 90px;
     position: fixed;
@@ -1501,18 +1475,17 @@ body {
     background-color: #175089;
     padding: 30px 0;
     top: 90px;
-}
+  }
 
-.social-links-container a {
-  color: #fff;
-  font-size: 20px;
-  text-decoration: none;
-  justify-content: center;
-  display: block;
-  margin-bottom: 15px;
-  margin-right: 10px;
-}
-
+  .social-links-container a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: center;
+    display: block;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
 
 
   .hidden {
