@@ -387,21 +387,26 @@ projects.forEach((project) => {
 
   const seeMoreLink = document.createElement('a');
   seeMoreLink.textContent = 'See More';
+  seeMoreLink.addEventListener('click', () => {
+  popupTitle.textContent = project.title;
+  popupDescription.textContent = project.longDescription;
+  popupLiveDemo.href = project.liveDemoUrl;
   popupSourceCode.href = project.sourceCodeUrl;
 
-    popupScreenshots.innerHTML = '';
-    project.screenshots.forEach((screenshot) => { 
-      const screenshotElement = document.createElement('img');
-      screenshotElement.src = screenshot;
-      screenshotElement.alt = `${project.title} Screenshot`;
-    popupScreenshots.appendChild(screenshotElement);
-   });
+  popupScreenshots.innerHTML = '';
+  project.screenshots.forEach((screenshot) => {
+  const screenshotElement = document.createElement('img');
+  screenshotElement.src = screenshot;
+  screenshotElement.alt = `${project.title} Screenshot`;
+  popupScreenshots.appendChild(screenshotElement);
+});
 
-    popup.style.opacity = '1';
-    popup.style.visibility = 'visible';
-  });
+  popup.style.opacity = '1';
+  popup.style.visibility = 'visible';
+});
 
   actionsElement.appendChild(seeMoreLink);
+
   projectElement.appendChild(titleElement);
   projectElement.appendChild(imageElement);
   projectElement.appendChild(descriptionElement);
@@ -414,6 +419,7 @@ popupCloseButton.addEventListener('click', () => {
   popup.style.opacity = '0';
   popup.style.visibility = 'hidden';
 });
+
 
 const form = document.getElementById('contact-form');
 const nameInput = document.getElementById('name');
