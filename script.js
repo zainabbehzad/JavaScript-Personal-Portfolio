@@ -3,7 +3,6 @@ const openMenu = document.querySelector('.openMenu');
 const hamburgerIcon = openMenu.querySelector('.fa-bars');
 const closeIcon = openMenu.querySelector('.fa-times');
 
-// Define the show function before using it in the event listener
 function show() {
   mainMenu.style.display = 'flex';
   openMenu.classList.add('active');
@@ -11,7 +10,6 @@ function show() {
   closeIcon.classList.remove('hidden');
 }
 
-// Define the close function before using it in the event listener
 function close() {
   mainMenu.style.display = 'none';
   openMenu.classList.remove('active');
@@ -19,7 +17,6 @@ function close() {
   closeIcon.classList.add('hidden');
 }
 
-// Add the event listeners after the functions are defined
 openMenu.addEventListener('click', show);
 mainMenu.addEventListener('click', close);
 
@@ -392,20 +389,20 @@ projects.forEach((project) => {
   const seeMoreLink = document.createElement('a');
   seeMoreLink.textContent = 'See More';
   seeMoreLink.addEventListener('click', () => {
-      popupTitle.textContent = project.title;
-      popupDescription.textContent = project.longDescription;
-      popupLiveDemo.href = project.liveDemoUrl;
-      popupSourceCode.href = project.sourceCodeUrl;
+    popupTitle.textContent = project.title;
+    popupDescription.textContent = project.longDescription;
+    popupLiveDemo.href = project.liveDemoUrl;
+    popupSourceCode.href = project.sourceCodeUrl;
 
     popupScreenshots.innerHTML = '';
     project.screenshots.forEach((screenshot) => {
-        const screenshotElement = document.createElement('img');
-        screenshotElement.src = screenshot;
-        screenshotElement.alt = `${project.title} Screenshot`;
-        popupScreenshots.appendChild(screenshotElement);
+      const screenshotElement = document.createElement('img');
+      screenshotElement.src = screenshot;
+      screenshotElement.alt = `${project.title} Screenshot`;
+      popupScreenshots.appendChild(screenshotElement);
     });
 
-    popup.style.opacity = '1';
+      popup.style.opacity = '1';
     popup.style.visibility = 'visible';
   });
 
@@ -423,7 +420,6 @@ popupCloseButton.addEventListener('click', () => {
   popup.style.opacity = '0';
   popup.style.visibility = 'hidden';
 });
-
 
 const form = document.getElementById('contact-form');
 const nameInput = document.getElementById('name');
@@ -466,7 +462,7 @@ function validateForm() {
   if (emailInput.value !== emailInput.value.toLowerCase()) {
     isValid = false;
     errorMessage.textContent = 'Email must be in lowercase.';
-  } else if (!/^\w+([\.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
+  } else if (/^\w+([\.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
     isValid = false;
     errorMessage.textContent = 'Invalid email address.';
   } else {

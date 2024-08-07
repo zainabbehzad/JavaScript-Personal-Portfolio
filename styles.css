@@ -818,6 +818,16 @@ body {
     text-align: center;
   }
 
+  .social-links-container a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: center;
+    display: block;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+
   .side-navbar a:hover {
     color: #000;
   }
@@ -946,7 +956,7 @@ body {
     position: relative;
   }
 
-  .vertical-line6:after {
+  .vertical-line6::after {
     content: "";
     position: absolute;
     top: 30px;
@@ -1346,16 +1356,6 @@ body {
     margin-top: 20px;
     gap: 10px;
     text-decoration: underline;
-  }
-
-  .social-links-container a {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    justify-content: center;
-    display: block;
-    margin-bottom: 15px;
-    margin-right: 10px;
   }
 
   .popup-actions a:hover {
