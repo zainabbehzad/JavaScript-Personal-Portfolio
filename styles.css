@@ -48,26 +48,6 @@ body {
     display: none;
   }
 
-  nav .mainMenu li a {
-    display: block;
-    padding: 5px;
-    color: #000;
-    text-decoration: none;
-  }
-
-  .soft-skills-section li,
-  .technical-skills-section li {
-    margin-top: 10px;
-    font-weight: 700;
-    font-size: 12px;
-  }
-
-  nav .mainMenu li {
-    list-style-type: none;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
   .actions a {
     display: inline-block;
     background-color: #7796b5;
@@ -97,6 +77,26 @@ body {
     font-size: 50px;
     text-decoration: none;
     margin-right: 40px;
+  }
+
+  nav .mainMenu li a {
+    display: block;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .soft-skills-section li,
+  .technical-skills-section li {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  nav .mainMenu li {
+    list-style-type: none;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .popup-actions a:hover {
@@ -807,10 +807,6 @@ body {
     text-align: center;
   }
 
-  .side-navbar a:hover {
-    color: #000;
-  }
-
   .popup-actions a {
     background-color: #7796b5;
     color: #000;
@@ -820,6 +816,10 @@ body {
     width: 160px;
     height: 30px;
     text-align: center;
+  }
+
+  .side-navbar a:hover {
+    color: #000;
   }
 
   .project p {
@@ -1348,6 +1348,16 @@ body {
     text-decoration: underline;
   }
 
+  .social-links-container a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: center;
+    display: block;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+
   .popup-actions a:hover {
     background-color: #113c69;
   }
@@ -1453,16 +1463,6 @@ body {
     background-color: #175089;
     padding: 30px 0;
     top: 140px;
-  }
-
-  .social-links-container a {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    justify-content: center;
-    display: block;
-    margin-bottom: 15px;
-    margin-right: 10px;
   }
 
   .hidden {

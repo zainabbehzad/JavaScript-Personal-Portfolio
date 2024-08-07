@@ -3,9 +3,7 @@ const openMenu = document.querySelector('.openMenu');
 const hamburgerIcon = openMenu.querySelector('.fa-bars');
 const closeIcon = openMenu.querySelector('.fa-times');
 
-openMenu.addEventListener('click', show);
-mainMenu.addEventListener('click', close);
-
+// Define the show function before using it in the event listener
 function show() {
   mainMenu.style.display = 'flex';
   openMenu.classList.add('active');
@@ -13,12 +11,17 @@ function show() {
   closeIcon.classList.remove('hidden');
 }
 
+// Define the close function before using it in the event listener
 function close() {
   mainMenu.style.display = 'none';
   openMenu.classList.remove('active');
   hamburgerIcon.classList.remove('hidden');
   closeIcon.classList.add('hidden');
 }
+
+// Add the event listeners after the functions are defined
+openMenu.addEventListener('click', show);
+mainMenu.addEventListener('click', close);
 
 const homeSection = document.getElementById('home');
 
@@ -111,8 +114,8 @@ const certificateData = [{
   date: 'June 1, 2024',
   link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
   image: 'images/Responsive Web Design certificate.png.png',
-  },
-  {
+},
+{
   title: 'JS Algorithms and Data Structures',
   date: 'July 11, 2024',
   link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
@@ -157,7 +160,7 @@ function createCertificatesSection() {
     certificatesContainer.appendChild(certificateElement);
 
     linkElement.addEventListener('click', () => {
-    showCertificateModal(certificate);
+      showCertificateModal(certificate);
     });
   });
 
@@ -244,10 +247,10 @@ function showDescription(item) {
     modalContent.appendChild(projectLinks);
   }
 
-    let closeButton = document.createElement('span');
-    closeButton.classList.add('close-button');
-    closeButton.textContent = 'X';
-    closeButton.onclick = function() {
+  let closeButton = document.createElement('span');
+  closeButton.classList.add('close-button');
+  closeButton.textContent = 'X';
+  closeButton.onclick = function () {
     modal.style.display = 'none';
   };
   modalContent.appendChild(closeButton);
@@ -333,7 +336,7 @@ const projects = [{
   image: 'images/Telephone Number Validator.png.png',
   shortDescription: 'This project is a survey form built using HTML and CSS.',
   longDescription: 'This project is a survey form built using HTML and CSS. The form collects user information, preferences, and feedback through various input fields, dropdown menus, and a textarea. The design is clean and responsive, ensuring a seamless user experience across different devices.',
-   technologies: ['HTML', 'CSS'],
+  technologies: ['HTML', 'CSS'],
   liveDemoUrl: 'https://zainabbehzad.github.io/Telephone-Number-Validator/',
   sourceCodeUrl: 'https://github.com/zainabbehzad/Telephone-Number-Validator.git',
   screenshots: ['images/telephone1.png'],
@@ -353,10 +356,11 @@ const projects = [{
   image: 'images/Pokemon Search App.png.png',
   shortDescription: 'The Pokemon Search App is a comprehensive mobile application that allows users to quickly search for and learn about various Pokemon from the Pokemon universe. ',
   longDescription: 'The app features a detailed database of all the Pokemon species, with information such as their names, types, abilities, stats, evolutions, and more.Users can search for Pokemon by name, type, or other criteria, and the app will display the relevant details about the selected Pokemon. The app also includes high-quality images and illustrations of each Pokemon to enhance the user experience.In addition to the search functionality, the app provides tools for users to keep track of the Pokemon they have encountered or collected, such as a Pokemon checklist or a Pokedex. Users can also access information about the Pokemon`s strengths, weaknesses, and best strategies for battles.Overall, the Pokemon Search App is a valuable resource for Pokemon fans of all ages, providing a convenient and user-friendly way to explore the vast world of Pokemon.',
-  technologies: ['HTML', 'CSS'],    liveDemoUrl: 'https://zainabbehzad.github.io/Pokemon-Search-App/',
+  technologies: ['HTML', 'CSS'],   
+  liveDemoUrl: 'https://zainabbehzad.github.io/Pokemon-Search-App/',
   sourceCodeUrl: 'https://github.com/zainabbehzad/Pokemon-Search-App.git',
   screenshots: ['images/pokemon1.png'],
-  },
+},
 ];
 
 const projectsContainer = document.querySelector('.projects');
@@ -388,22 +392,22 @@ projects.forEach((project) => {
   const seeMoreLink = document.createElement('a');
   seeMoreLink.textContent = 'See More';
   seeMoreLink.addEventListener('click', () => {
-  popupTitle.textContent = project.title;
-  popupDescription.textContent = project.longDescription;
-  popupLiveDemo.href = project.liveDemoUrl;
-  popupSourceCode.href = project.sourceCodeUrl;
+      popupTitle.textContent = project.title;
+      popupDescription.textContent = project.longDescription;
+      popupLiveDemo.href = project.liveDemoUrl;
+      popupSourceCode.href = project.sourceCodeUrl;
 
-  popupScreenshots.innerHTML = '';
-  project.screenshots.forEach((screenshot) => {
-  const screenshotElement = document.createElement('img');
-  screenshotElement.src = screenshot;
-  screenshotElement.alt = `${project.title} Screenshot`;
-  popupScreenshots.appendChild(screenshotElement);
-});
+    popupScreenshots.innerHTML = '';
+    project.screenshots.forEach((screenshot) => {
+        const screenshotElement = document.createElement('img');
+        screenshotElement.src = screenshot;
+        screenshotElement.alt = `${project.title} Screenshot`;
+        popupScreenshots.appendChild(screenshotElement);
+    });
 
-  popup.style.opacity = '1';
-  popup.style.visibility = 'visible';
-});
+    popup.style.opacity = '1';
+    popup.style.visibility = 'visible';
+  });
 
   actionsElement.appendChild(seeMoreLink);
 
@@ -456,13 +460,13 @@ function validateForm() {
   let isValid = true;
 
   if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
-      isValid = false;
-    }
+    isValid = false;
+  }
 
-    if (emailInput.value !== emailInput.value.toLowerCase()) {
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
     isValid = false;
     errorMessage.textContent = 'Email must be in lowercase.';
-  } else if (!/^\w+([\.-]?\w+)*@\w+([-]?\w+)*(.\w{2,3})+$/.test(emailInput.value)) {
+  } else if (!/^\w+([\.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
     isValid = false;
     errorMessage.textContent = 'Invalid email address.';
   } else {
@@ -486,10 +490,10 @@ function loadFormData() {
   const formData = JSON.parse(localStorage.getItem('formData'));
 
   if (formData) {
-      nameInput.value = formData.name;
-      emailInput.value = formData.email;
-  messageInput.value = formData.message;
-    }
+    nameInput.value = formData.name;
+    emailInput.value = formData.email;
+    messageInput.value = formData.message;
+  }
 }
 
 function createSocialMediaLinks() {
