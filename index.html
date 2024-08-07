@@ -1,172 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatable" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./fontawesome-free-5.13.0-web/css/all.css">
     <title>Personal Portfolio</title>
-   <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav id="navbar">
-      <button id="hamburger-menu">
-        <i class="fa-solid fa-bars icon"></i>
-      </button>
-      <h1 class="head-title">Portfolio</h1>
-      <ul id="mobile-menu" class="hide">
-        <li><a href="#home" class="menu-item">Home</a></li>
-        <li><a href="#about" class="menu-item">About Me</a></li>
-        <li><a href="#Skills" class="menu-item">Skills</a></li>
-        <li><a href="#Projects" class="menu-item">Projects</a></li>
-        <li><a href="#contact" class="menu-item">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  
-  <!--home section-->
-  <section id="home" class="home">
-    <img src="images/a6d0a5b11985fee10f49fe88765e7cfd.jpeg" class="profile-image" alt="Profile Image">
-  </section> 
-
-  
-
-<!--About section-->
-<div>
-<section id="about" class="about">
-  <div class="about-me-content">
-   
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Portfolio</h1>
+        </div>
+        <div class="openMenu">
+          <i class="fa fa-bars"></i>
+          <i class="fa fa-times hidden"></i>
+        </div>
+        <ul class="mainMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#Projects">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="side-navbar">
+      <a href="#home">
+        <p class="p1">Home</p>
+        <div class="vertical-line">
+          <img src="images/Vector.png" alt="Vector Icon" class="vertical-icon1">
+        </div>
+      </a>
+      <a href="#about">
+        <p class="p2">About Me</p>
+        <div class="vertical-line">
+          <img src="images/Vector (1).png" alt="Vector Icon" class="vertical-icon2">
+        </div>
+      </a>
+      <a href="#Skills">
+        <p class="p3">Skills</p>
+        <div class="vertical-line">
+          <img src="images/Vector (2).png" alt="Vector Icon" class="vertical-icon3">
+        </div>
+      </a>
+      <a href="#Projects">
+        <p class="p4">Projects</p>
+        <div class="vertical-line">
+          <img src="images/Vector (8).png" alt="Vector Icon" class="vertical-icon4">
+        </div>
+      </a>
+      <a href="#contact">
+        <p class="p5">Contact</p>
+        <div class="vertical-line">
+          <img src="images/Vector (4).png" alt="Vector Icon" class="vertical-icon5">
+        </div>
+      </a>
+      <div class="vertical-line6"></div>
+    </div>
+    <div>
+    <section id="home" class="home">
+      <img src="images/a6d0a5b11985fee10f49fe88765e7cfd.jpeg" class="profile-image" alt="Profile Image">
+      
+    </section>
+    <div id="home-social-links"></div>
   </div>
-</section>
-  <section>
-     <div class="paragraph">
-    <p>I'm <strong>Zainab Behazad,</strong> front-end web developer</p>
-    <p>I can provide clean code and pixel perfect design.</p>
-    <p>I also, make the website more interactive with web animations.</p>
-    <p>A responsive design makes your website available to all users, regardless of their device.</p>
-  </div>
-</section>
-<hr class="line">
- 
-
-<div id="certificatesSection"></div>
-<div id="certificateModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-content-container">
-      <div id="modalContent"></div>
+    <div>
+    <section id="about" class="about">
+      <div class="about-me-content"></div>
+    </section>
+    <section>
+      <div class="paragraph">
+        <p>I'm <strong>Zainab Behazad,</strong> front-end web developer</p>
+        <p>I can provide clean code and pixel perfect design.</p>
+        <p>I also, make the website more interactive with web animations.</p>
+        <p>A responsive design makes your website available to all users, regardless of their device.</p>
+      </div>
+    </section>
+    <hr class="line">
+    <div id="certificatesSection"></div>
+    <div id="certificateModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-content-container">
+          <div id="modalContent"></div>
+        </div>
+        <span class="close">&times;</span>
+      </div>
     </div>
-    <span class="close">&times;</span>
-  </div>
-</div>
-<!--Skills-->
-<section id="Skills" class="skills-section">
- 
-  <div class="modal1" id="modal1">
-    <div class="modal-object">
-      <span class="close-button1"></span>
-      <h2 id="modal-title"></h2>
-      <p id="modal-description"></p>
-    </div>
-  </div>
-  <button class="ski">Skills</button>
-  <div class="skills-containerme">
-    <div class="soft-skills-section">
-      <h2>Soft Skills</h2>
-      <ul>
-        <li>Team Work</li>
-        <li>Effective Communication</li>
-        <li>Problem Solving</li>
-        <li>Leadership</li>
-        <li>Time Management</li>
-      </ul>
-    </div>
-    <div class="divider"></div>
-    <div class="technical-skills-section">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-    </div>
-  </div>
-  <div class="skills-container">
-    <div class="skill-item" onclick="showDescription(this)">
-      <span>6+</span>
-      <h3>TEAM WORK</h3>
-    </div>
-    <div class="skill-item" onclick="showDescription(this)">
-      <span>9+</span>
-      <h3>PROJECTS DONE</h3>
-    </div>
-    <div class="skill-item" onclick="showDescription(this)">
-      <span>4+</span>
-      <h3>PROGRAMMING LANGUAGE</h3>
-    </div>
-    <div class="skill-item" onclick="showDescription(this)">
-      <span>2+</span>
-      <h3>EXPERIENCE</h3>
-    </div>
-  </div>
-</section>
-<!--Project section-->
-<section id="Projects">
-  <div class="contain">
-    <button class="pro">Projects</button>
-    
-    <div class="projects"></div>
-
-    <div class="popup">
-      <div class="popup-content">
-        <span class="popup-close">&times;</span>
-        <h2 class="popup-title"></h2>
-        <div class="popup-screenshots"></div>
-        <p class="popup-description"></p>
-        <div class="popup-actions">
-          <a class="popup-live-demo" target="_blank">Live Demo</a>
-          <a class="popup-source-code" target="_blank">Source Code</a>
+    <section id="Skills" class="skills-section">
+      <div class="modal1" id="modal1">
+        <div class="modal-obj">
+          <span class="close-button1"></span>
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-   <!--Contact me section-->
-   <section id="contact">
-    <button class="but"><h2>CONTACT</h2></button>
-    
-    <form id="contact-form" action="https://formspree.io/zainabbehzad03@gmail.com" method="POST">
-      <div>
-        <img src="images/Vector (9).png">
-        <input type="text" id="name" name="name" placeholder="CALL ME" maxlength="30" required>
+      <button class="ski">Skills</button>
+      <div class="skills-containerme">
+        <div class="soft-skills-section">
+          <h2 class="hi">Soft Skills</h2>
+          <ul>
+            <li>Team Work</li>
+            <li>Effective Communication</li>
+            <li>Problem Solving</li>
+            <li>Leadership</li>
+            <li>Time Management</li>
+          </ul>
+        </div>
+        <div class="divider"></div>
+        <div class="technical-skills-section">
+          <h2 class="hi1">Technical Skills</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
       </div>
-      
-      <div>
-        <img src="images/Vector (10).png">
-        <input type="email" id="email" name="email" placeholder="EMAIL" required>
+      <div class="skills-container">
+        <div class="skill-item" onclick="showDescription(this)">
+          <span>6+</span>
+          <h3>TEAM WORK</h3>
+        </div>
+        <div class="skill-item" onclick="showDescription(this)">
+          <span>9+</span>
+          <h3>PROJECTS DONE</h3>
+        </div>
+        <div class="skill-item" onclick="showDescription(this)">
+          <span>4+</span>
+          <h3>PROGRAMMING LANGUAGE</h3>
+        </div>
+        <div class="skill-item" onclick="showDescription(this)">
+          <span>2+</span>
+          <h3>EXPERIENCE</h3>
+        </div>
       </div>
-      
-      <div>
-        <img src="images/Vector (11).png" class="image">
-        <textarea id="message" name="message" placeholder="MESSAGE" maxlength="500" required></textarea>
-        <button type="submit" id="send" class="send-button">Send</button>
+    </section>
+    <section id="Projects">
+      <div class="project-contain"></div>
+      <button class="pro">PROJECTS</button>
+      <div class="projects"></div>
+      <div class="popup">
+        <div class="popup-content">
+          <span class="popup-close">&times;</span>
+          <h2 class="popup-title"></h2>
+          <div class="popup-screenshots"></div>
+          <p class="popup-description"></p>
+          <div class="popup-actions">
+            <a class="popup-live-demo" target="_blank">[Live Demo]</a>
+            <a class="popup-source-code" target="_blank">[Source Code]</a>
+          </div>
+        </div>
       </div>
-      <div id="error-message" class="hidden">Please fill in all the required fields correctly.</div>
-    </form>
-  </section>
-    
-    <div class="social-links">
-      <!-- The links will be appended here -->
-    </div>
-  </section>
-  <footer>
-    <p class="signature">Built with <span class="heart">♥️</span> by [Zainab Behzad].</p>
-  </footer>
-   
-   <script src="script.js"></script>
+    </section>
+    <section id="contact">
+      <button class="but">
+        <h2>CONTACT</h2>
+      </button>
+      <form id="contact-form" action="https://formspree.io/zainabbehzad03@gmail.com" method="POST">
+        <div>
+          <img src="images/Vector (9).png" class="photo">
+          <input type="text" id="name" name="name" placeholder="CALL ME" maxlength="30" required>
+        </div>
+        <div>
+          <img src="images/Vector (10).png" class="photo">
+          <input type="email" id="email" name="email" placeholder="EMAIL" required>
+        </div>
+        <div>
+          <img src="images/Vector (11).png" class="photo">
+          <textarea id="message" name="message" placeholder="MESSAGE" maxlength="500" required></textarea>
+          <button type="submit" id="send" class="send-button">Send</button>
+        </div>
+        <div id="error-message" class="hidden">Please fill in all the required fields correctly.</div>
+      </form>
+      <div id="footer-social-links"></div>
+    </section>
+<div class="social-links"></div>
+    </section>
+    <footer>
+      <p class="signature">Built with <span class="heart">♥️</span> By [Zainab Behzad].</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
-  </html>
-
-
-
-
+</html>
