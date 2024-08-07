@@ -64,7 +64,7 @@ moreAboutMeButton.classList.add('about-me-button');
 moreAboutMeButton.textContent = 'ABOUT ME';
 aboutSection.appendChild(moreAboutMeButton);
 
-let hr = document.createElement('hr');
+const hr = document.createElement('hr');
 aboutSection.appendChild(hr);
 
 const moreAboutMeContainer = document.createElement('div');
@@ -88,10 +88,10 @@ closeButton.classList.add('close-button');
 closeButton.textContent = 'Close';
 
 closeButton.addEventListener('click', () => {
-moreAboutMeContainer.style.display = 'none';
+  moreAboutMeContainer.style.display = 'none';
 });
 
-moreAboutMeContainer.appendChild(closeButton);
+  moreAboutMeContainer.appendChild(closeButton);
 
 moreAboutMeButton.addEventListener('click', () => {
   moreAboutMeContainer.style.display = 'block';
