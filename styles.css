@@ -122,11 +122,9 @@ body {
     text-align: center;
     background-color: #e9e9e9;
     padding: 20px;
-    text-align: center;
     width: 100vw;
     margin-left: 0;
     height: auto;
-    padding: 20px 10px;
   }
 
   h5 {
@@ -297,7 +295,6 @@ body {
   }
 
   .skills-section {
-    text-align: center;
     width: 100%;
     padding: 20px;
     text-align: center;
@@ -501,7 +498,6 @@ body {
     text-align: center;
   }
 
-
   .project-contain {
     display: grid;
     flex-wrap: wrap;
@@ -669,7 +665,7 @@ body {
     margin-bottom: 20px;
   }
 
-  #contact-form>div {
+  #contact-form > div {
     background-color: #d9d9d9;
     padding: 30px;
     padding-top: 50px;
@@ -733,11 +729,6 @@ body {
     text-align: center;
   }
 
-  .hire-me-button {
-    font-size: 24px;
-    padding: 10px 20px;
-  }
-
   .social-links-container {
     display: flex;
     flex-direction: row;
@@ -763,7 +754,6 @@ body {
   }
 
   .signature {
-    font-size: 16px;
     text-align: center;
     color: #000;
     font-size: 14px;
@@ -818,28 +808,28 @@ body {
     color: #000;
   }
 
-  .side-navbar a>p {
+  .side-navbar a > p {
     margin-top: 30px;
     margin-left: 10vw;
   }
 
-  .side-navbar a>p.p1 {
+  .side-navbar a > p.p1 {
     margin-top: 7vw;
   }
 
-  .side-navbar a>p.p2 {
+  .side-navbar a > p.p2 {
     margin-top: 3vh;
   }
 
-  .side-navbar a>p.p3 {
+  .side-navbar a > p.p3 {
     margin-top: 10vh;
   }
 
-  .side-navbar a>p.p4 {
+  .side-navbar a > p.p4 {
     margin-top: 9vh;
   }
 
-  .side-navbar a>p.p5 {
+  .side-navbar a > p.p5 {
     margin-top: 5vh;
   }
 
@@ -970,7 +960,6 @@ body {
     align-items: center;
     text-align: center;
     background-color: #e9e9e9;
-    padding: 20px;
     width: 30vw;
     height: 100vh;
     padding: 20px 10px;
@@ -1046,7 +1035,7 @@ body {
     margin-left: 10%;
     margin-right: auto;
     font-size: 22px;
-    font-weight: 500px;
+    font-weight: 500;
   }
 
   .line {
@@ -1126,7 +1115,6 @@ body {
   }
 
   .skills-section {
-    text-align: center;
     width: 80%;
     padding: 20px;
     text-align: center;
@@ -1167,7 +1155,7 @@ body {
   .soft-skills-section ul li::before,
   .technical-skills-section ul li::before {
     content: "•";
-    color: #6D8FB1;
+    color: #6d8fb1;
     font-size: 40px;
     display: inline-block;
     width: 1em;
@@ -1404,7 +1392,7 @@ body {
     margin-bottom: 10px;
   }
 
-  #contact-form>div {
+  #contact-form > div {
     background-color: #e9e9e9;
     padding: 40px;
     padding-top: 60px;
@@ -1487,7 +1475,6 @@ body {
     margin-right: 10px;
   }
 
-
   .hidden {
     display: none;
   }
@@ -1502,7 +1489,6 @@ body {
     font-size: 16px;
     text-align: center;
     color: #000;
-    font-size: 20px;
     margin-left: 20%;
     margin-bottom: 20px;
   }
