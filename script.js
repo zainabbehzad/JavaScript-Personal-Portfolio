@@ -91,7 +91,7 @@ closeButton.addEventListener('click', () => {
   moreAboutMeContainer.style.display = 'none';
 });
 
-  moreAboutMeContainer.appendChild(closeButton);
+moreAboutMeContainer.appendChild(closeButton);
 
 moreAboutMeButton.addEventListener('click', () => {
   moreAboutMeContainer.style.display = 'block';
@@ -211,24 +211,24 @@ function showCertificateModal(certificate) {
 createCertificatesSection();
 
 function showDescription(item) {
-  let span = item.querySelector('span');
-  let h3 = item.querySelector('h3');
+  const span = item.querySelector('span');
+  const h3 = item.querySelector('h3');
 
-  let modal = document.createElement('div');
+  const modal = document.createElement('div');
   modal.classList.add('modal');
 
-  let modalContent = document.createElement('div');
+  const modalContent = document.createElement('div');
   modalContent.classList.add('modal-object');
 
-  let spanElement = document.createElement('span');
+  const spanElement = document.createElement('span');
   spanElement.textContent = span.textContent;
-  let h3Element = document.createElement('h3');
+  const h3Element = document.createElement('h3');
   h3Element.textContent = h3.textContent;
   modalContent.appendChild(spanElement);
   modalContent.appendChild(h3Element);
 
   if (h3.textContent === 'PROJECTS DONE') {
-    let projectLinks = document.createElement('div');
+    const projectLinks = document.createElement('div');
     projectLinks.innerHTML = `
       <a href='https://zainabbehzad.github.io/survey-form/'>Survey Form</a><br>
       <a href='https://zainabbehzad.github.io/Tribute-page/'>Tribute-page</a><br>
@@ -244,7 +244,7 @@ function showDescription(item) {
     modalContent.appendChild(projectLinks);
   }
 
-  let closeButton = document.createElement('span');
+  const closeButton = document.createElement('span');
   closeButton.classList.add('close-button');
   closeButton.textContent = 'X';
   closeButton.onclick = function () {
@@ -353,7 +353,7 @@ const projects = [{
   image: 'images/Pokemon Search App.png.png',
   shortDescription: 'The Pokemon Search App is a comprehensive mobile application that allows users to quickly search for and learn about various Pokemon from the Pokemon universe. ',
   longDescription: 'The app features a detailed database of all the Pokemon species, with information such as their names, types, abilities, stats, evolutions, and more.Users can search for Pokemon by name, type, or other criteria, and the app will display the relevant details about the selected Pokemon. The app also includes high-quality images and illustrations of each Pokemon to enhance the user experience.In addition to the search functionality, the app provides tools for users to keep track of the Pokemon they have encountered or collected, such as a Pokemon checklist or a Pokedex. Users can also access information about the Pokemon`s strengths, weaknesses, and best strategies for battles.Overall, the Pokemon Search App is a valuable resource for Pokemon fans of all ages, providing a convenient and user-friendly way to explore the vast world of Pokemon.',
-  technologies: ['HTML', 'CSS'],   
+  technologies: ['HTML', 'CSS'],
   liveDemoUrl: 'https://zainabbehzad.github.io/Pokemon-Search-App/',
   sourceCodeUrl: 'https://github.com/zainabbehzad/Pokemon-Search-App.git',
   screenshots: ['images/pokemon1.png'],
@@ -402,7 +402,7 @@ projects.forEach((project) => {
       popupScreenshots.appendChild(screenshotElement);
     });
 
-      popup.style.opacity = '1';
+    popup.style.opacity = '1';
     popup.style.visibility = 'visible';
   });
 
@@ -431,8 +431,8 @@ loadFormData();
 
 nameInput.addEventListener('input', saveFormData);
 emailInput.addEventListener('input', function () {
-  let currentValue = this.value;
-  let newChar = currentValue.charAt(currentValue.length - 1);
+  const currentValue = this.value;
+  const newChar = currentValue.charAt(currentValue.length - 1);
 
   if (newChar !== newChar.toLowerCase()) {
     this.value = currentValue.slice(0, -1) + newChar.toLowerCase();
@@ -462,7 +462,7 @@ function validateForm() {
   if (emailInput.value !== emailInput.value.toLowerCase()) {
     isValid = false;
     errorMessage.textContent = 'Email must be in lowercase.';
-  } else if (/^\w+([\.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
+  } else if (/^\w+([.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
     isValid = false;
     errorMessage.textContent = 'Invalid email address.';
   } else {
