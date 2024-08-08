@@ -120,39 +120,6 @@ const certificateData = [{
 },
 ];
 
-// Define the showCertificateModal function first
-
-// Define the showDescription function first
-function showDescription(item) {
-  const span = item.querySelector('span');
-  const h3 = item.querySelector('h3');
-
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
-
-  const modalContent = document.createElement('div');
-  modalContent.classList.add('modal-object');
-
-  const spanElement = document.createElement('span');
-  spanElement.textContent = span.textContent;
-  const h3Element = document.createElement('h3');
-  h3Element.textContent = h3.textContent;
-  modalContent.appendChild(spanElement);
-  modalContent.appendChild(h3Element);
-
-  // Add the modal to the page
-  document.body.appendChild(modal);
-  modal.appendChild(modalContent);
-
-  // Show the modal
-  modal.style.display = 'block';
-
-  // Add event listener to close the modal
-  modal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-}
-
 function createCertificatesSection() {
   const certificatesSection = document.getElementById('certificatesSection');
   const sectionElement = document.createElement('section');
@@ -205,6 +172,38 @@ function createCertificatesSection() {
 
   certificatesSection.appendChild(sectionElement);
 }
+
+function showDescription(item) {
+  const span = item.querySelector('span');
+  const h3 = item.querySelector('h3');
+
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+
+  const modalContent = document.createElement('div');
+  modalContent.classList.add('modal-object');
+
+  const spanElement = document.createElement('span');
+  spanElement.textContent = span.textContent;
+  const h3Element = document.createElement('h3');
+  h3Element.textContent = h3.textContent;
+  modalContent.appendChild(spanElement);
+  modalContent.appendChild(h3Element);
+
+  // Add the modal to the page
+  document.body.appendChild(modal);
+  modal.appendChild(modalContent);
+
+  // Show the modal
+  modal.style.display = 'block';
+
+  // Add event listener to close the modal
+  modal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+}
+
+
 
 createCertificatesSection();
 
