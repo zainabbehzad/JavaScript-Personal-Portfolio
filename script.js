@@ -156,9 +156,7 @@ function createCertificatesSection() {
 
     certificatesContainer.appendChild(certificateElement);
 
-    linkElement.addEventListener('click', () => {
-      showCertificateModal(certificate);
-    });
+    
   });
 
   const resumeButton = document.createElement('button');
@@ -210,17 +208,6 @@ function showCertificateModal(certificate) {
 
 createCertificatesSection();
 
-// Get all the elements with the class 'item'
-const items = document.querySelectorAll('.item');
-
-// Add a click event listener to each item
-items.forEach(item => {
-  item.addEventListener('click', () => {
-    showDescription(item);
-  });
-});
-
-// The showDescription function, as you've already defined it
 function showDescription(item) {
   const span = item.querySelector('span');
   const h3 = item.querySelector('h3');
@@ -243,8 +230,15 @@ function showDescription(item) {
     projectLinks.innerHTML = `
       <a href='https://zainabbehzad.github.io/survey-form/'>Survey Form</a><br>
       <a href='https://zainabbehzad.github.io/Tribute-page/'>Tribute-page</a><br>
-      <!-- Add the rest of the project links here -->
-    `;
+      <a href='https://zainabbehzad.github.io/technical-documentation-page/'>technical-documentation-page</a><br>
+      <a href='//zainabbehzad.github.io/Product-Landing-Page/'>Product-Landing-Page</a><br>
+      <a href='https://zainabbehzad.github.io/personal-portfolio-webpage/'>personal-portfolio-webpage</a><br>
+      <a href='https://zainabbehzad.github.io/-Palindrome-Checker/'>Palindrome-Checker</a><br>
+      <a href='https://zainabbehzad.github.io/Roman-Numeral-Converter/'>Roman-Numeral-Converter</a><br>
+      <a href='https://zainabbehzad.github.io/Telephone-Number-Validator/'>Telephone-Number-Validator</a><br>
+      <a href='https://zainabbehzad.github.io/Cash-Register/'>Cash-Register</a><br>
+      <a href='https://zainabbehzad.github.io/Pokemon-Search-App/'>Pokemon-Search-App</a><br>  
+   `;
     modalContent.appendChild(projectLinks);
   }
 
