@@ -156,7 +156,9 @@ function createCertificatesSection() {
 
     certificatesContainer.appendChild(certificateElement);
 
-    
+    linkElement.addEventListener('click', () => {
+      showCertificateModal(certificate);
+    });
   });
 
   const resumeButton = document.createElement('button');
