@@ -276,7 +276,7 @@ const projects = [{
   technologies: ['HTML", "CSS'],
   liveDemoUrl: 'zainabbehzad.github.io/Tribute-page/',
   sourceCodeUrl: 'https://github.com/zainabbehzad/Tribute-page.git',
-  screenshots: ['images/Tribute1.png", "images/Tribute2.png", "images/Tribute Page.png.png'],
+  screenshots: ['images/Tribute1.png', 'images/Tribute2.png'],
 },
 {
   title: 'Technical-documentation-page',
@@ -286,7 +286,7 @@ const projects = [{
   technologies: ['HTML', 'CSS'],
   liveDemoUrl: 'https://zainabbehzad.github.io/technical-documentation-page/',
   sourceCodeUrl: 'https://github.com/zainabbehzad/technical-documentation-page.git',
-  screenshots: ['images/Technical1.png", "images/Technical2.png", "images/Technical3.png", "images/Technical5.png", "images/Technical6.png", "images/Technical7.png'],
+  screenshots: ['images/Technical1.png', 'images/Technical2.png', 'images/Technical3.png', 'images/Technical5.png', 'images/Technical6.png', 'images/Technical7.png'],
 },
 {
   title: 'Product-Landing-Page',
@@ -296,7 +296,7 @@ const projects = [{
   technologies: ['HTML', 'CSS'],
   liveDemoUrl: 'https://zainabbehzad.github.io/Product-Landing-Page/',
   sourceCodeUrl: 'https://github.com/zainabbehzad/Product-Landing-Page.git',
-  screenshots: ['images/product1.png", "images/product2.png", "images/product4.png'],
+  screenshots: ['images/product1.png', 'images/product2.png', 'images/product4.png'],
 },
 {
   title: 'personal-portfolio-webpage',
@@ -316,7 +316,7 @@ const projects = [{
   liveDemoUrl: 'https://zainabbehzad.github.io/-Palindrome-Checker/',
   Technologies: ['HTML, CSS'],
   sourceCodeUrl: 'https://github.com/zainabbehzad/-Palindrome-Checker.git',
-  screenshots: ['images/palindrome1.png", "images/palindrome2.png'],
+  screenshots: ['images/palindrome1.png', 'images/palindrome2.png'],
 },
 {
   title: 'Roman Numeral Converter',
@@ -326,7 +326,7 @@ const projects = [{
   technologies: ['HTML', 'CSS'],
   liveDemoUrl: 'https://zainabbehzad.github.io/Roman-Numeral-Converter/',
   sourceCodeUrl: 'https://github.com/zainabbehzad/Roman-Numeral-Converter.git',
-  screenshots: ['images/roman1.png/'],
+  screenshots: ['images/roman1.png'],
 },
 {
   title: 'Telephone Number Validator',
@@ -427,6 +427,46 @@ const emailInput = document.getElementById('email');
 const messageInput = document.getElementById('message');
 const errorMessage = document.getElementById('error-message');
 
+function loadFormData() {
+  const formData = JSON.parse(localStorage.getItem('formData'));
+
+  if (formData) {
+    nameInput.value = formData.name;
+    emailInput.value = formData.email;
+    messageInput.value = formData.message;
+  }
+}
+
+function saveFormData() {
+  const formData = {
+    name: nameInput.value,
+    email: emailInput.value,
+    message: messageInput.value,
+  };
+
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+function validateForm() {
+  let isValid = true;
+
+  if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+    isValid = false;
+  }
+
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
+    isValid = false;
+    errorMessage.textContent = 'Email must be in lowercase.';
+  } else if (!/^\w+([.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
+    isValid = false;
+    errorMessage.textContent = 'Invalid email address.';
+  } else {
+    errorMessage.textContent = '';
+  }
+
+  return isValid;
+}
+
 loadFormData();
 
 nameInput.addEventListener('input', saveFormData);
@@ -451,46 +491,6 @@ form.addEventListener('submit', (event) => {
     errorMessage.classList.remove('hidden');
   }
 });
-
-function validateForm() {
-  let isValid = true;
-
-  if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
-    isValid = false;
-  }
-
-  if (emailInput.value !== emailInput.value.toLowerCase()) {
-    isValid = false;
-    errorMessage.textContent = 'Email must be in lowercase.';
-  } else if (/^\w+([.-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
-    isValid = false;
-    errorMessage.textContent = 'Invalid email address.';
-  } else {
-    errorMessage.textContent = '';
-  }
-
-  return isValid;
-}
-
-function saveFormData() {
-  const formData = {
-    name: nameInput.value,
-    email: emailInput.value,
-    message: messageInput.value,
-  };
-
-  localStorage.setItem('formData', JSON.stringify(formData));
-}
-
-function loadFormData() {
-  const formData = JSON.parse(localStorage.getItem('formData'));
-
-  if (formData) {
-    nameInput.value = formData.name;
-    emailInput.value = formData.email;
-    messageInput.value = formData.message;
-  }
-}
 
 function createSocialMediaLinks() {
   const socialLinksContainer = document.createElement('div');
