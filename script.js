@@ -156,33 +156,13 @@ function createCertificatesSection() {
 
     certificatesContainer.appendChild(certificateElement);
 
-    function showCertificateModal(certificate) {
-      // ... (existing code for showCertificateModal)
-    }
-    
-    function showDescription(item) {
-      // ... (existing code for showDescription)
-    }
-    
-    function createCertificatesSection() {
-      // ... (existing code for createCertificatesSection)
-    
-      certificateData.forEach((certificate) => {
-        // ... (existing code for creating certificate elements)
-    
-        linkElement.addEventListener('click', () => {
-          showCertificateModal(certificate);
-        });
-    
-        certificateElement.addEventListener('click', () => {
-          showDescription(certificateElement);
-        });
-      });
-    
-      // ... (existing code for creating resume button)
-    }
-    
-    createCertificatesSection();
+    linkElement.addEventListener('click', () => {
+      showCertificateModal(certificate);
+    });
+
+    certificateElement.addEventListener('click', () => {
+      showDescription(certificateElement);
+    });
   });
 
   const resumeButton = document.createElement('button');
