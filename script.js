@@ -121,44 +121,6 @@ const certificateData = [{
 ];
 
 // Define the showCertificateModal function first
-function showCertificateModal(certificate) {
-  const modal = document.getElementById('certificateModal');
-  const modalContent = document.getElementById('modalContent');
-  modalContent.innerHTML = '';
-
-  const titleElement = document.createElement('h2');
-  titleElement.textContent = certificate.title;
-  modalContent.appendChild(titleElement);
-
-  const dateElement = document.createElement('p');
-  dateElement.textContent = certificate.date;
-  modalContent.appendChild(dateElement);
-
-  const linkElement = document.createElement('a');
-  linkElement.href = certificate.link;
-  linkElement.target = '_blank';
-
-  const imageElement = document.createElement('img');
-  imageElement.src = certificate.image;
-  imageElement.alt = 'Certificate';
-  imageElement.style.maxWidth = '100%';
-  imageElement.style.height = 'auto';
-  linkElement.appendChild(imageElement);
-  modalContent.appendChild(linkElement);
-
-  modal.style.display = 'block';
-
-  const closeButton = document.querySelector('.close');
-  closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-}
 
 // Define the showDescription function first
 function showDescription(item) {
