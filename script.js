@@ -106,90 +106,6 @@ moreAboutMeButton.addEventListener('click', () => {
   moreAboutMeContainer.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.9)';
 });
 
-const certificateData = [{
-  title: 'Responsive Web Design "html, CSS"',
-  date: 'June 1, 2024',
-  link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
-  image: 'images/Responsive Web Design certificate.png.png',
-},
-{
-  title: 'JS Algorithms and Data Structures',
-  date: 'July 11, 2024',
-  link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
-  image: 'images/JS certificate.png.png',
-},
-  // Add more certificate data as needed
-];
-
-function showCertificateModal(certificate) {
-  const modal = document.getElementById('certificateModal');
-  const modalContent = document.getElementById('modalContent');
-  modalContent.innerHTML = '';
-
-  const titleElement = document.createElement('h2');
-  titleElement.textContent = certificate.title;
-  modalContent.appendChild(titleElement);
-
-  const dateElement = document.createElement('p');
-  dateElement.textContent = certificate.date;
-  modalContent.appendChild(dateElement);
-
-  const linkElement = document.createElement('a');
-  linkElement.href = certificate.link;
-  linkElement.target = '_blank';
-
-  const imageElement = document.createElement('img');
-  imageElement.src = certificate.image;
-  imageElement.alt = 'Certificate';
-  imageElement.style.maxWidth = '100%';
-  imageElement.style.height = 'auto';
-  linkElement.appendChild(imageElement);
-  modalContent.appendChild(linkElement);
-
-  modal.style.display = 'block';
-
-  const closeButton = document.querySelector('.close');
-  closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-}
-
-function showDescription(item) {
-  const span = item.querySelector('span');
-  const h3 = item.querySelector('h3');
-
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
-
-  const modalContent = document.createElement('div');
-  modalContent.classList.add('modal-object');
-
-  const spanElement = document.createElement('span');
-  spanElement.textContent = span.textContent;
-  const h3Element = document.createElement('h3');
-  h3Element.textContent = h3.textContent;
-  modalContent.appendChild(spanElement);
-  modalContent.appendChild(h3Element);
-
-  // Add the modal to the page
-  document.body.appendChild(modal);
-  modal.appendChild(modalContent);
-
-  // Show the modal
-  modal.style.display = 'block';
-
-  // Add event listener to close the modal
-  modal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-}
-
 function createCertificatesSection() {
   const certificatesSection = document.getElementById('certificatesSection');
   const sectionElement = document.createElement('section');
@@ -229,10 +145,6 @@ function createCertificatesSection() {
     linkElement.addEventListener('click', () => {
       showCertificateModal(certificate);
     });
-
-    certificateElement.addEventListener('click', () => {
-      showDescription(certificateElement);
-    });
   });
 
   const resumeButton = document.createElement('button');
@@ -241,6 +153,59 @@ function createCertificatesSection() {
   sectionElement.appendChild(resumeButton);
 
   certificatesSection.appendChild(sectionElement);
+}
+
+const certificateData = [{
+  title: 'Responsive Web Design "html, CSS"',
+  date: 'June 1, 2024',
+  link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
+  image: 'images/Responsive Web Design certificate.png.png',
+},
+{
+  title: 'JS Algorithms and Data Structures',
+  date: 'July 11, 2024',
+  link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
+  image: 'images/JS certificate.png.png',
+},
+];
+
+function showCertificateModal(certificate) {
+  const modal = document.getElementById('certificateModal');
+  const modalContent = document.getElementById('modalContent');
+  modalContent.innerHTML = '';
+
+  const titleElement = document.createElement('h2');
+  titleElement.textContent = certificate.title;
+  modalContent.appendChild(titleElement);
+
+  const dateElement = document.createElement('p');
+  dateElement.textContent = certificate.date;
+  modalContent.appendChild(dateElement);
+
+  const linkElement = document.createElement('a');
+  linkElement.href = certificate.link;
+  linkElement.target = '_blank';
+
+  const imageElement = document.createElement('img');
+  imageElement.src = certificate.image;
+  imageElement.alt = 'Certificate';
+  imageElement.style.maxWidth = '100%';
+  imageElement.style.height = 'auto';
+  linkElement.appendChild(imageElement);
+  modalContent.appendChild(linkElement);
+
+  modal.style.display = 'block';
+
+  const closeButton = document.querySelector('.close');
+  closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 }
 
 createCertificatesSection();

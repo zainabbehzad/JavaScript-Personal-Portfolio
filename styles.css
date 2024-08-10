@@ -839,31 +839,59 @@ body {
     margin-bottom: 15px;
   }
 
+  .side-navbar {
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #175089;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20vw;
+    padding-top: -40px;
+  }
+  
+  .side-navbar a {
+    padding: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    font-size: 16px;
+    margin-left: 0.5vw;
+  }
+  
+  .side-navbar a:hover {
+    color: #000;
+  }
+  
   .side-navbar a > p {
     margin-top: 30px;
     margin-left: 10vw;
   }
-
+  
   .side-navbar a > p.p1 {
     margin-top: 7vw;
   }
-
+  
   .side-navbar a > p.p2 {
     margin-top: 3vh;
   }
-
+  
   .side-navbar a > p.p3 {
     margin-top: 10vh;
   }
-
+  
   .side-navbar a > p.p4 {
     margin-top: 9vh;
   }
-
+  
   .side-navbar a > p.p5 {
     margin-top: 5vh;
   }
-
+  
   .vertical-icon1,
   .vertical-icon2,
   .vertical-icon3,
@@ -876,27 +904,27 @@ body {
     width: 2vw;
     height: 3.5vh;
   }
-
+  
   .vertical-icon1 {
     top: 35px;
   }
-
+  
   .vertical-icon2 {
     top: 35px;
   }
-
+  
   .vertical-icon3 {
     top: 35px;
   }
-
+  
   .vertical-icon4 {
     top: 35px;
   }
-
+  
   .vertical-icon5 {
     top: 35px;
   }
-
+  
   .vertical-line {
     position: absolute;
     width: 2px;
@@ -908,13 +936,13 @@ body {
     display: flex;
     align-items: center;
   }
-
+  
   .side-navbar a:first-child .vertical-line {
     top: -10px;
     height: 30px;
     position: relative;
   }
-
+  
   .side-navbar a:first-child .vertical-line::before {
     content: "";
     position: absolute;
@@ -926,27 +954,27 @@ body {
     border-radius: 50%;
     background-color: #000;
   }
-
+  
   .side-navbar a:nth-child(2) .vertical-line {
     top: 5px;
     height: 30px;
   }
-
+  
   .side-navbar a:nth-child(3) .vertical-line {
     top: 10px;
     height: 30px;
   }
-
+  
   .side-navbar a:nth-child(4) .vertical-line {
     top: -15px;
     height: 30px;
   }
-
+  
   .side-navbar a:nth-child(5) .vertical-line {
     top: -35px;
     height: 30px;
   }
-
+  
   .vertical-line6 {
     height: 30px;
     margin-left: 85px;
@@ -955,7 +983,7 @@ body {
     margin-top: -40px;
     position: relative;
   }
-
+  
   .vertical-line6::after {
     content: "";
     position: absolute;
