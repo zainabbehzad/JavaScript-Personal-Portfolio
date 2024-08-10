@@ -9,8 +9,6 @@
 ![Screenshot (140)](https://github.com/user-attachments/assets/843ba10c-09ba-49c5-af92-57cfa72291da)
 
 
-live Demo [https://zainabbehzad.github.io/Pokemon-Search-App/]
-
 
 ## Cash-Register 🛠️
 - HTML
