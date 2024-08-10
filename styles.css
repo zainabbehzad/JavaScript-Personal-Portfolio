@@ -940,8 +940,6 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 2vw;
-    height: 5vh;
   }
 
   .vertical-icon1 {
@@ -953,7 +951,7 @@ body {
     background-image: url('images/Vector (1).png');
     top: 15px;
   }
- 
+
   .vertical-icon3 {
     background-image: url('images/Vector (2).png');
     top: 15px;
