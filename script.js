@@ -211,16 +211,6 @@ function createCertificatesSection() {
 
 createCertificatesSection();
 
-// Get all the elements with the .item class
-const items = document.querySelectorAll('.item');
-
-// Add click event listener to each item
-items.forEach((item) => {
-  item.addEventListener('click', () => {
-    showDescription(item);
-  });
-});
-
 function showDescription(item) {
   const span = item.querySelector('span');
   const h3 = item.querySelector('h3');
@@ -268,6 +258,16 @@ function showDescription(item) {
 
   modal.style.display = 'block';
 }
+
+// Get all the elements with the .item class
+const items = document.querySelectorAll('.item');
+
+// Add click event listener to each item
+items.forEach((item) => {
+  item.addEventListener('click', () => {
+    showDescription(item);
+  });
+});
 
 const projects = [{
   title: 'Survey Form',
