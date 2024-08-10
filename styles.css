@@ -828,68 +828,35 @@ body {
     margin-left: 0.5vw;
     bottom: 60px;
   }
-  
+
   .side-navbar a:hover {
     color: #000;
   }
-  
+
   .side-navbar a > p {
     margin-left: 10vw;
   }
-  
+
   .side-navbar a > p.p1 {
     margin-top: 12vw;
   }
-  
+
   .side-navbar a > p.p2 {
     margin-top: 7vh;
   }
-  
+
   .side-navbar a > p.p3 {
     margin-top: 6vh;
   }
-  
+
   .side-navbar a > p.p4 {
     margin-top: 6vh;
   }
-  
+
   .side-navbar a > p.p5 {
     margin-top: 5vh;
   }
-  
-  .vertical-icon1,
-  .vertical-icon2,
-  .vertical-icon3,
-  .vertical-icon4,
-  .vertical-icon5 {
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2vw;
-    height: 5vh;
-  }
-  
-  .vertical-icon1 {
-    top: 15px;
-  }
-  
-  .vertical-icon2 {
-    top: 15px;
-  }
-  
-  .vertical-icon3 {
-    top: 50px;
-  }
-  
-  .vertical-icon4 {
-    top: 20px;
-  }
-  
-  .vertical-icon5 {
-    top: 10px;
-  }
-  
+
   .vertical-line {
     position: absolute;
     width: 2px;
@@ -919,7 +886,7 @@ body {
   }
   
   .side-navbar a:nth-child(2) .vertical-line {
-    top: 5px;
+    top: 0;
     height: 40px;
   }
   
@@ -943,10 +910,10 @@ body {
     margin-left: 85px;
     background-color: #000;
     width: 2px;
-    margin-top: 480px;
+    margin-top: 470px;
     position: absolute;
   }
-  
+
   .vertical-line6::after {
     content: "";
     position: absolute;
@@ -957,7 +924,7 @@ body {
     background-color: #000;
     border-radius: 50%;
   }
-  
+
   .vertical-icon1,
   .vertical-icon2,
   .vertical-icon3,
@@ -969,29 +936,39 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 35px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2vw;
+    height: 5vh;
   }
-  
+
   .vertical-icon1 {
     background-image: url('images/Vector.png');
+    top: 15px;
   }
-  
+
   .vertical-icon2 {
     background-image: url('images/Vector (1).png');
+    top: 15px;
   }
-  
+ 
   .vertical-icon3 {
     background-image: url('images/Vector (2).png');
     top: 15px;
   }
-  
+
   .vertical-icon4 {
     background-image: url('images/Vector (8).png');
+    top: 20px;
   }
-  
+
   .vertical-icon5 {
     background-image: url('images/Vector (4).png');
+    top: 10px;
   }
-  
+
   .side-navbar a:hover .vertical-icon1,
   .side-navbar a:hover .vertical-icon2,
   .side-navbar a:hover .vertical-icon3,
