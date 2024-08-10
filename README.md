@@ -5,7 +5,9 @@
 🌟 👩‍💻A JavaScript Personal Portfolio is a dynamic and interactive website that showcases my skills, experiences, and projects to potential employers or clients. It is typically built using HTML, CSS, and JavaScript, allowing for a high degree of customization and interactivity.A personal portfolio website built using JavaScript, HTML, and CSS that showcases the developer's skills, projects, and experience.💻📝🚀
 
 ## Demo 📸
-![JavaScript Personal Portfolio](images/Screenshot%20(49).png)
+![Screenshot (139)](https://github.com/user-attachments/assets/d655308d-2c47-4434-94a3-352ea29603af)
+![Screenshot (140)](https://github.com/user-attachments/assets/843ba10c-09ba-49c5-af92-57cfa72291da)
+
 
 live Demo [https://zainabbehzad.github.io/Pokemon-Search-App/]
 
