@@ -259,10 +259,8 @@ function showDescription(item) {
   modal.style.display = 'block';
 }
 
-// Get all the elements with the .item class
 const items = document.querySelectorAll('.item');
 
-// Add click event listener to each item
 items.forEach((item) => {
   item.addEventListener('click', () => {
     showDescription(item);
