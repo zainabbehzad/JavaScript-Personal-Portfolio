@@ -106,19 +106,59 @@ moreAboutMeButton.addEventListener('click', () => {
   moreAboutMeContainer.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.9)';
 });
 
-const certificateData = [{
-  title: 'Responsive Web Design "html, CSS"',
-  date: 'June 1, 2024',
-  link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
-  image: 'images/Responsive Web Design certificate.png.png',
-},
-{
-  title: 'JS Algorithms and Data Structures',
-  date: 'July 11, 2024',
-  link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
-  image: 'images/JS certificate.png.png',
-},
+const certificateData = [
+  {
+    title: 'Responsive Web Design "html, CSS"',
+    date: 'June 1, 2024',
+    link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
+    image: 'images/Responsive Web Design certificate.png.png',
+  },
+  {
+    title: 'JS Algorithms and Data Structures',
+    date: 'July 11, 2024',
+    link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
+    image: 'images/JS certificate.png.png',
+  },
 ];
+
+function showCertificateModal(certificate) {
+  const modal = document.getElementById('certificateModal');
+  const modalContent = document.getElementById('modalContent');
+  modalContent.innerHTML = '';
+
+  const titleElement = document.createElement('h2');
+  titleElement.textContent = certificate.title;
+  modalContent.appendChild(titleElement);
+
+  const dateElement = document.createElement('p');
+  dateElement.textContent = certificate.date;
+  modalContent.appendChild(dateElement);
+
+  const linkElement = document.createElement('a');
+  linkElement.href = certificate.link;
+  linkElement.target = '_blank';
+
+  const imageElement = document.createElement('img');
+  imageElement.src = certificate.image;
+  imageElement.alt = 'Certificate';
+  imageElement.style.maxWidth = '100%';
+  imageElement.style.height = 'auto';
+  linkElement.appendChild(imageElement);
+  modalContent.appendChild(linkElement);
+
+  modal.style.display = 'block';
+
+  const closeButton = document.querySelector('.close');
+  closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+}
 
 function createCertificatesSection() {
   const certificatesSection = document.getElementById('certificatesSection');
@@ -169,46 +209,17 @@ function createCertificatesSection() {
   certificatesSection.appendChild(sectionElement);
 }
 
-function showCertificateModal(certificate) {
-  const modal = document.getElementById('certificateModal');
-  const modalContent = document.getElementById('modalContent');
-  modalContent.innerHTML = '';
-
-  const titleElement = document.createElement('h2');
-  titleElement.textContent = certificate.title;
-  modalContent.appendChild(titleElement);
-
-  const dateElement = document.createElement('p');
-  dateElement.textContent = certificate.date;
-  modalContent.appendChild(dateElement);
-
-  const linkElement = document.createElement('a');
-  linkElement.href = certificate.link;
-  linkElement.target = '_blank';
-
-  const imageElement = document.createElement('img');
-  imageElement.src = certificate.image;
-  imageElement.alt = 'Certificate';
-  imageElement.style.maxWidth = '100%';
-  imageElement.style.height = 'auto';
-  linkElement.appendChild(imageElement);
-  modalContent.appendChild(linkElement);
-
-  modal.style.display = 'block';
-
-  const closeButton = document.querySelector('.close');
-  closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-}
-
 createCertificatesSection();
+
+// Get all the elements with the .item class
+const items = document.querySelectorAll('.item');
+
+// Add click event listener to each item
+items.forEach((item) => {
+  item.addEventListener('click', () => {
+    showDescription(item);
+  });
+});
 
 function showDescription(item) {
   const span = item.querySelector('span');
