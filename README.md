@@ -9,10 +9,14 @@
 ![Screenshot (140)](https://github.com/user-attachments/assets/843ba10c-09ba-49c5-af92-57cfa72291da)
 
 
-live Demo [https://zainabbehzad.github.io/Pokemon-Search-App/]
+Live Demo [https://zainabbehzad.github.io/JavaScript-Personal-Portfolio/]
 
 
+<<<<<<< HEAD
 ## Technologies and Tools Used 🛠️
+=======
+## JavaScript-Personal-Portfolio🛠️
+>>>>>>> 947514ec8df73d091a513960a654e8ef658a4257
 - HTML
 - CSS
 - JavaScript
