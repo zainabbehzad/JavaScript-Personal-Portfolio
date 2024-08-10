@@ -106,6 +106,20 @@ moreAboutMeButton.addEventListener('click', () => {
   moreAboutMeContainer.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.9)';
 });
 
+const certificateData = [{
+  title: 'Responsive Web Design "html, CSS"',
+  date: 'June 1, 2024',
+  link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
+  image: 'images/Responsive Web Design certificate.png.png',
+},
+{
+  title: 'JS Algorithms and Data Structures',
+  date: 'July 11, 2024',
+  link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
+  image: 'images/JS certificate.png.png',
+},
+];
+
 function createCertificatesSection() {
   const certificatesSection = document.getElementById('certificatesSection');
   const sectionElement = document.createElement('section');
@@ -154,20 +168,6 @@ function createCertificatesSection() {
 
   certificatesSection.appendChild(sectionElement);
 }
-
-const certificateData = [{
-  title: 'Responsive Web Design "html, CSS"',
-  date: 'June 1, 2024',
-  link: 'https://www.freecodecamp.org/certification/zainabbehzad/responsive-web-design',
-  image: 'images/Responsive Web Design certificate.png.png',
-},
-{
-  title: 'JS Algorithms and Data Structures',
-  date: 'July 11, 2024',
-  link: 'https://www.freecodecamp.org/certification/zainabbehzad/javascript-algorithms-and-data-structures-v8',
-  image: 'images/JS certificate.png.png',
-},
-];
 
 function showCertificateModal(certificate) {
   const modal = document.getElementById('certificateModal');
