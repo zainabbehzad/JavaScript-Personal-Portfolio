@@ -10,7 +10,7 @@
 
 
 
-## Cash-Register 🛠️
+## JavaScript-Personal-Portfolio🛠️
 - HTML
 - CSS
 - JavaScript
