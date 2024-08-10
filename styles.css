@@ -867,13 +867,13 @@ body {
     opacity: 1;
     display: flex;
   }
-  
+
   .side-navbar a:first-child .vertical-line {
     top: 120px;
     height: 40px;
     position: absolute;
   }
-  
+
   .side-navbar a:first-child .vertical-line::before {
     content: "";
     position: absolute;
@@ -884,27 +884,27 @@ body {
     border-radius: 50%;
     background-color: #000;
   }
-  
+
   .side-navbar a:nth-child(2) .vertical-line {
     top: 0;
     height: 40px;
   }
-  
+
   .side-navbar a:nth-child(3) .vertical-line {
     top: 0;
     height: 40px;
   }
-  
+
   .side-navbar a:nth-child(4) .vertical-line {
     top: 0;
     height: 40px;
   }
-  
+
   .side-navbar a:nth-child(5) .vertical-line {
     top: 0;
     height: 40px;
   }
-  
+
   .vertical-line6 {
     height: 40px;
     margin-left: 85px;
