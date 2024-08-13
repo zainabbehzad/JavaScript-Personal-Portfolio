@@ -54,10 +54,10 @@ Share and contribute: If you find this project helpful, consider sharing it with
 - LinkedIn: [Zainab Behzad](https://www.linkedin.com/in/zainab-behzad-3126692b5)
 - Email: [zainabbehzad03@gmail.com]
 - Github: [zainabbehzad](https://github.com/)
-- UX/UI Designers
+- UX/UI Designers:
 
-  Sakina Nazari
-  Marwa Andar
+  Sakina Nazari,
+  Marwa Andar,
   Shokria Hashimi 
   * Fihma Design Link: https://www.figma.com/design/Ybz9jc0b8YFQUhVURZAfCn/Untitled?node-id=29-91&t=UEdF9q2puPqfG0GP-1
 
