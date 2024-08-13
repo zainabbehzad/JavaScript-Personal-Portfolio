@@ -12,11 +12,7 @@
 Live Demo [https://zainabbehzad.github.io/JavaScript-Personal-Portfolio/]
 
 
-<<<<<<< HEAD
 ## Technologies and Tools Used 🛠️
-=======
-## JavaScript-Personal-Portfolio🛠️
->>>>>>> 947514ec8df73d091a513960a654e8ef658a4257
 - HTML
 - CSS
 - JavaScript
@@ -56,7 +52,7 @@ Share and contribute: If you find this project helpful, consider sharing it with
 ## Author 👩‍💻
 
 - LinkedIn: [Zainab Behzad](https://www.linkedin.com/in/zainab-behzad-3126692b5)
-- Email: [zainabbehzad03@gmail.com)
+- Email: [zainabbehzad03@gmail.com]
 - Github: [zainabbehzad](https://github.com/)
 - UX/UI Designers
 
