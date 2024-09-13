@@ -414,7 +414,7 @@ function closePopup() {
   popup.style.visibility = 'hidden';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
@@ -422,57 +422,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const errorMessage = document.getElementById('error-message');
 
   function loadFormData() {
-      const formData = JSON.parse(localStorage.getItem('formData'));
-      if (formData) {
-          nameInput.value = formData.name || '';
-          emailInput.value = formData.email || '';
-          messageTextarea.value = formData.message || '';
-      }
+    const formData = JSON.parse(localStorage.getItem('formData'));
+    if (formData) {
+      nameInput.value = formData.name || '';
+      emailInput.value = formData.email || '';
+      messageTextarea.value = formData.message || '';
+    }
   }
 
   function saveFormData() {
-      const formData = {
-          name: nameInput.value,
-          email: emailInput.value.toLowerCase(),
-          message: messageTextarea.value,
-      };
-      localStorage.setItem('formData', JSON.stringify(formData));
+    const formData = {
+      name: nameInput.value,
+      email: emailInput.value.toLowerCase(),
+      message: messageTextarea.value,
+    };
+    localStorage.setItem('formData', JSON.stringify(formData));
   }
 
-  // Validate form inputs
   function validateForm() {
-      let isValid = true;
-      errorMessage.style.display = 'none';
+    let isValid = true;
+    errorMessage.style.display = 'none';
 
-      if (!nameInput.value.trim() || !emailInput.value.trim() || !messageTextarea.value.trim()) {
-          isValid = false;
-          errorMessage.textContent = 'All fields are required.';
-      } else if (emailInput.value !== emailInput.value.toLowerCase()) {
-          isValid = false;
-          errorMessage.textContent = 'Email must be in lowercase.';
-      }
+    if (!nameInput.value.trim() || !emailInput.value.trim() || !messageTextarea.value.trim()) {
+      isValid = false;
+      errorMessage.textContent = 'All fields are required.';
+    } else if (emailInput.value !== emailInput.value.toLowerCase()) {
+      isValid = false;
+      errorMessage.textContent = 'Email must be in lowercase.';
+    }
 
-      if (!isValid) {
-          errorMessage.style.display = 'block';
-      }
+    if (!isValid) {
+      errorMessage.style.display = 'block';
+    }
 
-      return isValid;
+    return isValid;
   }
 
   loadFormData();
 
-  [nameInput, emailInput, messageTextarea].forEach((input) => {
+  [nameInput, emailInput, messageTextarea].forEach(function (input) {
     input.addEventListener('input', saveFormData);
   });
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     if (validateForm()) {
       fetch('https://formspree.io/f/xpwaerqw', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
+          Accept: 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -481,17 +480,26 @@ document.addEventListener('DOMContentLoaded', () => {
           message: messageTextarea.value.trim(),
         }),
       })
-        .then(response => {
+        .then(function (response) {
           if (response.ok) {
-            alert('Thank you for your message!');
+            // Create and display the thank you message
+            const thankYouMessage = document.createElement('div');
+            thankYouMessage.textContent = 'Thank you for your message!';
+            thankYouMessage.style.backgroundColor = '#d4edda'; // Light green background
+            thankYouMessage.style.color = '#155724'; // Dark green text
+            thankYouMessage.style.padding = '10px';
+            thankYouMessage.style.marginTop = '10px';
+            thankYouMessage.style.border = '1px solid #c3e6cb'; // Green border
+            thankYouMessage.style.borderRadius = '5px';
+            form.appendChild(thankYouMessage); // Append to the form
             form.reset();
             localStorage.removeItem('formData');
           } else {
             throw new Error('Submission failed.');
           }
         })
-        .catch(error => {
-          errorMessage.textContent = 'There was a problem with your submission: ' + error.message;
+        .catch(function (error) {
+          errorMessage.textContent = `There was a problem with your submission: ${error.message}`;
           errorMessage.style.display = 'block';
         });
     }
