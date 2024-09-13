@@ -345,6 +345,46 @@ const popupSourceCode = document.querySelector('.popup-source-code');
 const popupTechnologies = document.querySelector('.popup-technologies');
 const popupCloseButton = document.querySelector('.popup-close');
 
+// Define the openPopup function before using it
+function openPopup(project) {
+  popupTitle.textContent = project.title;
+
+  popupTechnologies.innerHTML = '';
+  project.technologies.forEach((technology) => {
+    const technologyElement = document.createElement('span');
+    technologyElement.textContent = technology;
+    technologyElement.classList.add('technology');
+    popupTechnologies.appendChild(technologyElement);
+  });
+
+  popupDescription.textContent = project.longDescription;
+  popupLiveDemo.href = project.liveDemoUrl;
+  popupSourceCode.href = project.sourceCodeUrl;
+
+  popupScreenshots.innerHTML = '';
+  project.screenshots.forEach((screenshot) => {
+    const screenshotElement = document.createElement('img');
+    screenshotElement.src = screenshot;
+    screenshotElement.alt = `${project.title} Screenshot`;
+    popupScreenshots.appendChild(screenshotElement);
+  });
+
+  popup.style.opacity = '1';
+  popup.style.visibility = 'visible';
+}
+
+// Define the closePopup function before using it
+function closePopup() {
+  popup.style.opacity = '0';
+  popup.style.visibility = 'hidden';
+}
+
+// Add event listener for the close button
+popupCloseButton.addEventListener('click', () => {
+  closePopup();
+});
+
+// Create project elements
 projects.forEach((project) => {
   const projectElement = document.createElement('div');
   projectElement.classList.add('project');
@@ -376,43 +416,6 @@ projects.forEach((project) => {
 
   projectsContainer.appendChild(projectElement);
 });
-
-popupCloseButton.addEventListener('click', () => {
-  closePopup();
-});
-
-function openPopup(project) {
-  popupTitle.textContent = project.title;
-
-  popupTechnologies.innerHTML = '';
-
-  project.technologies.forEach((technology) => {
-    const technologyElement = document.createElement('span');
-    technologyElement.textContent = technology;
-    technologyElement.classList.add('technology');
-    popupTechnologies.appendChild(technologyElement);
-  });
-
-  popupDescription.textContent = project.longDescription;
-  popupLiveDemo.href = project.liveDemoUrl;
-  popupSourceCode.href = project.sourceCodeUrl;
-
-  popupScreenshots.innerHTML = '';
-  project.screenshots.forEach((screenshot) => {
-    const screenshotElement = document.createElement('img');
-    screenshotElement.src = screenshot;
-    screenshotElement.alt = `${project.title} Screenshot`;
-    popupScreenshots.appendChild(screenshotElement);
-  });
-
-  popup.style.opacity = '1';
-  popup.style.visibility = 'visible';
-}
-
-function closePopup() {
-  popup.style.opacity = '0';
-  popup.style.visibility = 'hidden';
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
