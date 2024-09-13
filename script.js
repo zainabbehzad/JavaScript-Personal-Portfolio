@@ -421,7 +421,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const messageTextarea = document.getElementById('message');
   const errorMessage = document.getElementById('error-message');
 
-  // Load form data from localStorage
   const loadFormData = () => {
     const formData = JSON.parse(localStorage.getItem('formData'));
     if (formData) {
@@ -431,7 +430,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Save form data to localStorage
   const saveFormData = () => {
     const formData = {
       name: nameInput.value,
@@ -441,7 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('formData', JSON.stringify(formData));
   };
 
-  // Validate form inputs
   const validateForm = () => {
     let isValid = true;
     errorMessage.style.display = 'none';
@@ -463,12 +460,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadFormData();
 
-  // Add event listeners to form inputs
   [nameInput, emailInput, messageTextarea].forEach((input) => {
     input.addEventListener('input', saveFormData);
   });
 
-  // Handle form submission
   form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -485,28 +480,27 @@ document.addEventListener('DOMContentLoaded', () => {
           message: messageTextarea.value.trim(),
         }),
       })
-      .then((response) => {
-        if (response.ok) {
-          // Create and display the thank you message
-          const thankYouMessage = document.createElement('div');
-          thankYouMessage.textContent = 'Thank you for your message!';
-          thankYouMessage.style.backgroundColor = '#d4edda'; // Light green background
-          thankYouMessage.style.color = '#155724'; // Dark green text
-          thankYouMessage.style.padding = '10px';
-          thankYouMessage.style.marginTop = '10px';
-          thankYouMessage.style.border = '1px solid #c3e6cb'; // Green border
-          thankYouMessage.style.borderRadius = '5px';
-          form.appendChild(thankYouMessage); // Append to the form
-          form.reset();
-          localStorage.removeItem('formData');
-        } else {
-          throw new Error('Submission failed.');
-        }
-      })
-      .catch((error) => {
-        errorMessage.textContent = `There was a problem with your submission: ${error.message}`;
-        errorMessage.style.display = 'block';
-      });
+        .then((response) => {
+          if (response.ok) {
+            const thankYouMessage = document.createElement('div');
+            thankYouMessage.textContent = 'Thank you for your message!';
+            thankYouMessage.style.backgroundColor = '#d4edda';
+            thankYouMessage.style.color = '#155724';
+            thankYouMessage.style.padding = '10px';
+            thankYouMessage.style.marginTop = '10px';
+            thankYouMessage.style.border = '1px solid #c3e6cb';
+            thankYouMessage.style.borderRadius = '5px';
+            form.appendChild(thankYouMessage);
+            form.reset();
+            localStorage.removeItem('formData');
+          } else {
+            throw new Error('Submission failed.');
+          }
+        })
+        .catch((error) => {
+          errorMessage.textContent = `There was a problem with your submission: ${error.message}`;
+          errorMessage.style.display = 'block';
+        });
     }
   });
 });
