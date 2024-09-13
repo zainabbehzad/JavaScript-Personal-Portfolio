@@ -414,32 +414,32 @@ function closePopup() {
   popup.style.visibility = 'hidden';
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contact-form');
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const messageTextarea = document.getElementById('message');
   const errorMessage = document.getElementById('error-message');
 
-  function loadFormData() {
+  const loadFormData = () => {
     const formData = JSON.parse(localStorage.getItem('formData'));
     if (formData) {
       nameInput.value = formData.name || '';
       emailInput.value = formData.email || '';
       messageTextarea.value = formData.message || '';
     }
-  }
+  };
 
-  function saveFormData() {
+  const saveFormData = () => {
     const formData = {
       name: nameInput.value,
       email: emailInput.value.toLowerCase(),
       message: messageTextarea.value,
     };
     localStorage.setItem('formData', JSON.stringify(formData));
-  }
+  };
 
-  function validateForm() {
+  const validateForm = () => {
     let isValid = true;
     errorMessage.style.display = 'none';
 
@@ -456,15 +456,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     return isValid;
-  }
+  };
 
   loadFormData();
 
-  [nameInput, emailInput, messageTextarea].forEach(function (input) {
+  [nameInput, emailInput, messageTextarea].forEach(input => {
     input.addEventListener('input', saveFormData);
   });
 
-  form.addEventListener('submit', function (event) {
+  form.addEventListener('submit', event => {
     event.preventDefault();
 
     if (validateForm()) {
@@ -480,25 +480,24 @@ document.addEventListener('DOMContentLoaded', function () {
           message: messageTextarea.value.trim(),
         }),
       })
-        .then(function (response) {
+        .then(response => {
           if (response.ok) {
-            // Create and display the thank you message
             const thankYouMessage = document.createElement('div');
             thankYouMessage.textContent = 'Thank you for your message!';
-            thankYouMessage.style.backgroundColor = '#d4edda'; // Light green background
-            thankYouMessage.style.color = '#155724'; // Dark green text
+            thankYouMessage.style.backgroundColor = '#d4edda';
+            thankYouMessage.style.color = '#155724';
             thankYouMessage.style.padding = '10px';
             thankYouMessage.style.marginTop = '10px';
-            thankYouMessage.style.border = '1px solid #c3e6cb'; // Green border
+            thankYouMessage.style.border = '1px solid #c3e6cb';
             thankYouMessage.style.borderRadius = '5px';
-            form.appendChild(thankYouMessage); // Append to the form
+            form.appendChild(thankYouMessage);
             form.reset();
             localStorage.removeItem('formData');
           } else {
             throw new Error('Submission failed.');
           }
         })
-        .catch(function (error) {
+        .catch(error => {
           errorMessage.textContent = `There was a problem with your submission: ${error.message}`;
           errorMessage.style.display = 'block';
         });
