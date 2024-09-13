@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="./fontawesome-free-5.13.0-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -97,7 +100,7 @@
           <p id="modal-description"></p>
         </div>
       </div>
-      <button class="ski">Skills</button>
+      <button class="ski">SKILLS</button>
       <div class="skills-containerme">
         <div class="soft-skills-section">
           <h2 class="hi2">Soft Skills</h2>
@@ -121,7 +124,7 @@
       </div>
       <div class="skills-container">
         <div class="skill-item" onclick="showDescription(this)">
-          <span>6+</span>
+          <span>4+</span>
           <h3>TEAM WORK</h3>
         </div>
         <div class="skill-item" onclick="showDescription(this)">
@@ -129,11 +132,11 @@
           <h3>PROJECTS DONE</h3>
         </div>
         <div class="skill-item" onclick="showDescription(this)">
-          <span>4+</span>
+          <span>1+</span>
           <h3>PROGRAMMING LANGUAGE</h3>
         </div>
         <div class="skill-item" onclick="showDescription(this)">
-          <span>2+</span>
+          <span>1+</span>
           <h3>EXPERIENCE</h3>
         </div>
       </div>
@@ -148,33 +151,37 @@
           <h2 class="popup-title"></h2>
           <div class="popup-screenshots"></div>
           <p class="popup-description"></p>
+          <div class="popup-technologies"></div>
           <div class="popup-actions">
-            <a class="popup-live-demo" target="_blank">[Live Demo]</a>
+            <a class="popup-live-demo" target="_blank" id="Live">[Live Demo]</a>
             <a class="popup-source-code" target="_blank">[Source Code]</a>
           </div>
         </div>
       </div>
+    </div>
     </section>
     <section id="contact">
       <button class="but">
-        <h2>CONTACT</h2>
+          <h2>CONTACT</h2>
       </button>
-      <form id="contact-form" action="https://formspree.io/zainabbehzad03@gmail.com" method="POST">
-        <div>
-          <img src="images/Vector (9).png" class="photo">
-          <input type="text" id="name" name="name" placeholder="Call me" maxlength="30" required>
-        </div>
-        <div>
-          <img src="images/Vector (10).png" class="photo">
-          <input type="email" id="email" name="email" placeholder="Email" required>
-        </div>
-        <div>
-          <img src="images/Vector (11).png" class="photo">
-          <textarea id="message" name="message" placeholder="Message" maxlength="500" required></textarea>
-          <button type="submit" id="send" class="send-button">Send</button>
-        </div>
-        <div id="error-message" class="hidden">Please fill in all the required fields correctly.</div>
+      <div id="container"></div>
+      <form id="contact-form" action="https://formspree.io/f/xpwaerqw" method="POST">
+          <div>
+              <img src="images/Vector (9).png" class="photo">
+              <input type="text" id="name" name="name" placeholder="Call me" maxlength="30" required>
+          </div>
+          <div>
+              <img src="images/Vector (10).png" class="photo">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div>
+              <img src="images/Vector (11).png" class="photo1">
+              <textarea id="message" name="message" placeholder="Message" maxlength="500" required></textarea>
+              <button type="submit" id="send" class="send-button">Send</button>
+          </div>
+          <div id="error-message" class="hidden" style="color: red; display: none;"></div>
       </form>
+  </section>
       <div id="footer-social-links"></div>
     </section>
     <div class="social-links"></div>

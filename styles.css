@@ -6,6 +6,7 @@
 
 body {
   background-color: #e9e9e9;
+  font-family: 'Inter', sans-serif;
 }
 
 .side-navbar {
@@ -15,6 +16,8 @@ body {
 header {
   width: 100%;
   max-width: 768px;
+  height: 64px;
+  padding: 0, 0, 0, 15px;
 }
 
 nav {
@@ -26,15 +29,15 @@ nav {
   width: 100%;
   max-width: 768px;
   top: 0;
-  height: 35px;
+  height: 64px;
   align-items: center;
 }
 
 nav .mainMenu {
-  height: 35vh;
-  width: 40%;
-  margin-top: 38px;
-  margin-left: 50%;
+  height: 329px;
+  width: 196px;
+  margin-top: 45px;
+  margin-left: 55%;
   position: fixed;
   top: 0;
   right: 0;
@@ -58,6 +61,8 @@ nav .mainMenu {
   font-weight: 700;
   width: 70px;
   text-align: center;
+  margin-left: -10px;
+  padding-top: 2px;
 }
 
 .popup-actions a {
@@ -73,7 +78,7 @@ nav .mainMenu {
 
 .social-links-container a {
   color: #175089;
-  font-size: 50px;
+  font-size: 30px;
   text-decoration: none;
   margin-right: 40px;
 }
@@ -83,13 +88,13 @@ nav .mainMenu li a {
   padding: 5px;
   color: #000;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .soft-skills-section li,
 .technical-skills-section li {
   margin-top: 10px;
-  font-weight: 700;
-  font-size: 12px;
 }
 
 nav .mainMenu li {
@@ -122,6 +127,7 @@ nav .mainMenu li a:hover {
 
 .closeMenu {
   display: none;
+  background-color: #1e90ff;
 }
 
 .mainMenu.active .closeMenu {
@@ -139,18 +145,55 @@ nav .mainMenu li a:hover {
   margin-left: 30px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.openMenu .fa-times {
+  display: none;
+}
+
+.openMenu.active .fa-bars {
+  display: none;
+}
+
+.openMenu.active .fa-times {
+  display: block;
+}
+
+.mainMenu {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+.mainMenu.open {
+  display: flex;
+}
+
+.mainMenu li {
+  padding: 10px;
+}
+
+.mainMenu li a {
+  text-decoration: none;
+  color: #333;
+}
+
 .content {
   padding: 10px;
 }
 
 .profile-image {
-  width: 100%;
-  height: auto;
+  width: 430px;
+  height: 277px;
   margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .home {
@@ -159,22 +202,32 @@ nav .mainMenu li a:hover {
   align-items: center;
   text-align: center;
   background-color: #e9e9e9;
-  padding: 20px;
   width: 100vw;
-  margin-left: 0;
+  text-align: end;
   height: auto;
 }
 
 h5 {
-  margin-top: 50px;
+  margin-top: 60px;
+  font-size: 16px;
+  margin-bottom: -30px;
 }
 
 .web-developer-heading span {
   display: flex;
-  height: auto;
-  padding: 5px;
+  height: 31px;
+  padding: 2px, 11px;
   color: #fff;
   background-color: #175089;
+  width: 129px;
+  gap: 10px;
+  left: 138px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19.5px;
+  margin-top: -10px;
+  padding-left: 5px;
 }
 
 .hire-me-button {
@@ -193,37 +246,14 @@ h5 {
   border: 1px solid #175089;
 }
 
-.more-about-me {
-  font-size: 16px;
-  color: #1e90ff;
-  display: inline-block;
-  cursor: pointer;
-  position: static;
-  width: auto;
-  height: auto;
-  margin-top: 20px;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #175089;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.container.show {
-  display: block;
-}
-
 .about {
+  padding-top: 50px;
+  padding-bottom: 40px;
   display: flex;
   margin-top: 40px;
   height: 30px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .about-me-button {
@@ -326,11 +356,13 @@ h5 {
   border: 1px solid #175089;
   width: 50%;
   height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  Padding: 8px, 18px, 8px, 18px;
 }
 
 .skills-section {
   width: 100%;
-  padding: 20px;
   text-align: center;
   height: auto;
 }
@@ -340,46 +372,54 @@ h5 {
   margin-top: 40px;
   border-radius: 5px;
   text-align: left;
-  margin-left: 20%;
   font-weight: 700;
+  font-size: 12px;
+  margin-left: 40px;
 }
 
-.hi {
+.hi2 {
   background-color: #175089;
-  height: auto;
-  width: 80px;
+  height: 22px;
+  width: 86px;
+  padding-top: 5px;
   border-radius: 5px;
   text-align: center;
   color: #fff;
-  padding-top: 10px;
+  font-weight: 700;
   font-size: 12px;
+  line-height: 14.52px;
+  margin-left: -30px;
 }
 
-.hi1 {
+.hi3 {
   background-color: #175089;
-  height: auto;
+  height: 22px;
   width: 90px;
   border-radius: 5px;
   text-align: center;
   color: #fff;
-  padding-top: 10px;
+  padding-top: 5px;
+  font-weight: 700;
   font-size: 12px;
+  line-height: 14.52px;
+  margin-left: -30px;
 }
 
 .technical-skills-section {
-  flex-basis: 100%;
   background-color: #e9e9e9;
   padding: 20px;
   border-radius: 5px;
   text-align: left;
   font-weight: 700;
   margin-top: 20px;
+  font-size: 12px;
+  margin-left: 40px;
 }
 
 .soft-skills-section ul,
 .technical-skills-section ul {
   list-style-type: none;
-  padding: 0 0 0 20px;
+  
 }
 
 .soft-skills-section ul li::before,
@@ -388,9 +428,10 @@ h5 {
   color: #175089;
   font-size: 40px;
   display: inline-block;
-  width: 1em;
+  width: 0.5em;
   margin-left: -1em;
-  vertical-align: middle;
+  top: 20px;
+  transform: translateY(10px);
 }
 
 .ski {
@@ -401,7 +442,7 @@ h5 {
   background-color: #e9e9e9;
   padding: 10px 20px;
   font-size: 18px;
-  margin-top: 0;
+  margin-top: 50px;
   margin-bottom: 0;
   width: 200px;
   height: auto;
@@ -420,9 +461,12 @@ h5 {
 }
 
 .divider {
-  width: 5px;
+  width: 0.5px;
   background-color: #000;
   margin: 0 20px;
+  height: 196.01px;
+  margin-top: 110px;
+  margin-left: 10px;
 }
 
 .skills-container {
@@ -432,9 +476,9 @@ h5 {
   padding: 10px;
   background-color: #e9e9e9;
   color: #175089;
-  height: 200px;
-  width: 100%;
-  margin-left: 0;
+  height: 250px;
+  width: 80%;
+  margin-left: 40px;
 }
 
 .skill-item {
@@ -513,7 +557,9 @@ h5 {
   font-size: 18px;
   width: 170px;
   height: 35px;
-  margin-left: 120px;
+  margin-left: 130px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .projects {
@@ -539,13 +585,15 @@ h5 {
   text-align: center;
   font-size: 16px;
   margin-bottom: 15px;
+  margin-left: -15px;
 }
 
 .project p {
   margin-top: 0;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 20px;
   margin-bottom: 15px;
+  margin-left: -15px;
 }
 
 .project img {
@@ -553,6 +601,7 @@ h5 {
   height: auto;
   border-radius: 4px;
   margin-bottom: 10px;
+  margin-left: -20px;
 }
 
 .actions {
@@ -568,7 +617,7 @@ h5 {
   z-index: 999;
   left: 0;
   top: 0;
-  width: 90%;
+  width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
@@ -580,7 +629,7 @@ h5 {
 .popup-title {
   text-align: center;
   font-size: 16px;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 
 .popup-content {
@@ -592,6 +641,7 @@ h5 {
   max-width: 80%;
   position: relative;
   color: #000;
+  margin-top: 20px;
 }
 
 .popup-close {
@@ -604,6 +654,7 @@ h5 {
   border-radius: 30px;
   background-color: #7796b5;
   border: 1px solid #000;
+  bottom: 10px;
 }
 
 .popup-close:hover,
@@ -622,6 +673,7 @@ h5 {
 .popup-screenshots img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 30px;
 }
 
 .popup-actions {
@@ -683,6 +735,8 @@ h5 {
   font-size: 16px;
   background-color: #175089;
   height: 30px;
+  margin: -20px 0;
+  color: #fff;
 }
 
 .send-button {
@@ -707,6 +761,10 @@ h5 {
   color: red;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.photo1 {
+  margin-bottom: 18px;
 }
 
 .hidden {
@@ -784,24 +842,13 @@ h5 {
   .actions a {
     display: inline-block;
     background-color: #7796b5;
-    border: 1px solid #175089;
+    border: 3px solid #175089;
     color: #000;
-    height: 20px;
-    border-radius: 5px;
+    height: 25px;
+    border-radius: 10px;
     font-size: 12px;
     font-weight: 700;
-    width: 70px;
-    text-align: center;
-  }
-
-  .popup-actions a {
-    background-color: #7796b5;
-    color: #000;
-    padding-top: 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: 160px;
-    height: 30px;
+    width: 120px;
     text-align: center;
   }
 
@@ -812,7 +859,7 @@ h5 {
     justify-content: center;
     display: block;
     margin-bottom: 15px;
-    margin-right: 10px;
+    margin-right: 9px;
   }
 
   .side-navbar a {
@@ -821,7 +868,7 @@ h5 {
     color: #fff;
     position: relative;
     font-size: 16px;
-    margin-left: 0.5vw;
+    margin-left: 0.2vw;
     bottom: 90px;
   }
 
@@ -886,7 +933,7 @@ h5 {
   }
 
   .side-navbar a:nth-child(2) .vertical-line {
-    top: -10px;
+    top: -8px;
     height: 35px;
   }
 
@@ -901,16 +948,16 @@ h5 {
   }
 
   .side-navbar a:nth-child(5) .vertical-line {
-    top: -15px;
+    top: -10px;
     height: 35px;
   }
 
   .vertical-line6 {
     height: 35px;
-    margin-left: 85px;
+    margin-left: 80px;
     background-color: #000;
     width: 2px;
-    margin-top: 370px;
+    margin-top: 375px;
     position: absolute;
   }
 
@@ -1003,12 +1050,12 @@ h5 {
     height: 100vh;
     padding: 0;
     margin-left: 20%;
-    margin-top: 15%;
+    margin-top: 10%;
   }
 
   h5 {
     font-size: 16px;
-    margin-top: 0;
+    margin-bottom: -50px;
   }
 
   .web-developer-heading span {
@@ -1016,7 +1063,8 @@ h5 {
     padding: 5px;
     color: #fff;
     background-color: #175089;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
+ 
   }
 
   .hire-me-button {
@@ -1036,18 +1084,6 @@ h5 {
     height: 40px;
     margin-left: 25%;
     margin-bottom: 100px;
-  }
-
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #175089;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
   }
 
   .about-me-button {
@@ -1128,6 +1164,7 @@ h5 {
   .certificate img {
     max-width: 80%;
     padding-left: 40px;
+    margin-bottom: 20px;
   }
 
   .certificates-section {
@@ -1162,7 +1199,7 @@ h5 {
   }
 
   .skills-section {
-    width: 80%;
+    width: 60%;
     padding: 20px;
     text-align: center;
     height: auto;
@@ -1176,28 +1213,43 @@ h5 {
     font-weight: 700;
   }
 
+  .soft-skills-section {
+    margin-left: 20%;
+  }
+
   .hi2 {
     text-align: center;
     color: #175089;
     padding: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
+    background-color: #e9e9e9;
+    width: 200px;
+    margin-left: 1%;
   }
 
   .hi3 {
     text-align: center;
     color: #175089;
-    padding: 40px;
-    font-size: 18px;
+    padding: 30px;
+    font-size: 16px;
     font-weight: 700;
-    margin-left: -170px;
+    width: 300px;
+    background-color: #e9e9e9;
+    margin-left: -40%;
   }
 
-  .soft-skills-section li,
-  .technical-skills-section li {
-    margin-left: 40px;
+  .soft-skills-section li{
+    margin-left: 40%;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .technical-skills-section li {
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 12px;
     white-space: nowrap;
   }
 
@@ -1216,6 +1268,8 @@ h5 {
     width: 1em;
     margin-left: -1em;
     vertical-align: middle;
+    content: "•";
+    transform: translateY(-2px);
   }
 
   .ski {
@@ -1225,25 +1279,35 @@ h5 {
     border-radius: 10px;
     background-color: #e9e9e9;
     font-size: 50px;
-    margin-left: 32%;
-    width: 70%;
+    margin-left: 45%;
+    width: 100%;
     height: 15vh;
   }
 
-  .divider {
-    width: 2px;
+  .soft-skills-section {
+    position: relative;
+  }
+
+  .soft-skills-section::after {
+    content: '';
+    position: absolute;
+    top: 90px;
+    right: -1.5px;
+    width: 1.5px;
+    height: 60%;
     background-color: #175089;
-    margin-left: 80px;
-    height: 50vh;
-    margin-top: 150px;
+    right: -20%;
   }
 
   .skills-containerme {
     display: flex;
     justify-content: center;
     margin: 40px;
-    width: 100%;
+    width: 40%;
+    margin-left: 70%;
   }
+
+  
 
   .skills-container {
     display: none;
@@ -1296,6 +1360,11 @@ h5 {
     margin-bottom: 15px;
   }
 
+  .project p {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
   .project img {
     width: 100%;
     height: 40vh;
@@ -1316,13 +1385,12 @@ h5 {
     z-index: 999;
     left: 0;
     top: 0;
-    width: 60%;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
     visibility: hidden;
-    margin-left: 30%;
   }
 
   .popup-title {
@@ -1380,6 +1448,10 @@ h5 {
     text-decoration: underline;
   }
 
+  .popup-source-code {
+    margin-left: 500px;
+  }
+
   .popup-actions a:hover {
     background-color: #113c69;
   }
@@ -1434,7 +1506,7 @@ h5 {
     border-radius: 20px;
     font-size: 18px;
     background-color: #175089;
-    height: 70px;
+    height: 60px;
     text-align: center;
   }
 
@@ -1445,7 +1517,7 @@ h5 {
     border-radius: 20px;
     font-size: 18px;
     background-color: #175089;
-    height: 150px;
+    height: 180px;
     text-align: center;
   }
 
@@ -1459,13 +1531,20 @@ h5 {
     text-align: center;
     margin-left: 65%;
     padding: 12px 25px;
-    border: 1px solid #000;
+    border: 2px solid #000;
     margin-top: 20px;
   }
 
   .photo {
-    width: 40px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -10px;
+  }
+
+  .photo1 {
+    margin-bottom: 45px;
     height: 40px;
+    width: 40px;
   }
 
   #home-social-links {
@@ -1525,7 +1604,7 @@ h5 {
   }
 
   .side-navbar {
-    height: 100vh;
+    height: 1992px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -1535,7 +1614,7 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 20vw;
+    width: 759px;
     padding-top: 40px;
   }
 
@@ -1547,6 +1626,8 @@ h5 {
     display: block;
     margin-bottom: 15px;
     margin-right: 20px;
+    align-items: center;
+    text-align: center;
   }
 
   .side-navbar a {
@@ -1571,7 +1652,7 @@ h5 {
   }
 
   .side-navbar a > p {
-    margin-left: 10vw;
+    margin-left: 8vw;
   }
 
   .side-navbar a > p.p1 {
@@ -1579,7 +1660,7 @@ h5 {
   }
 
   .side-navbar a > p.p2 {
-    margin-top: 7vh;
+    margin-top: 6vh;
   }
 
   .side-navbar a > p.p3 {
@@ -1591,7 +1672,7 @@ h5 {
   }
 
   .side-navbar a > p.p5 {
-    margin-top: 5vh;
+    margin-top: 6vh;
   }
 
   .vertical-line {
@@ -1745,6 +1826,7 @@ h5 {
 
   h5 {
     font-size: 35px;
+    margin-top: 50px;
   }
 
   .hire-me-button {
