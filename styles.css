@@ -17,7 +17,6 @@ header {
   width: 100%;
   max-width: 768px;
   height: 64px;
-  padding: 0, 0, 0, 15px;
 }
 
 nav {
@@ -112,6 +111,10 @@ nav .mainMenu li a {
   margin-top: 10px;
 }
 
+.mainMenu li {
+  padding: 10px;
+}
+
 nav .mainMenu li {
   list-style-type: none;
   margin-right: 0;
@@ -180,10 +183,6 @@ nav .mainMenu li a:hover {
 
 .mainMenu.open {
   display: flex;
-}
-
-.mainMenu li {
-  padding: 10px;
 }
 
 .content {
@@ -357,7 +356,7 @@ h5 {
   height: 40px;
   font-size: 18px;
   font-weight: 700;
-  padding: 8px, 18px, 8px, 18px;
+  padding: 8px;
 }
 
 .skills-section {
@@ -1266,7 +1265,6 @@ h5 {
     width: 1em;
     margin-left: -1em;
     vertical-align: middle;
-    content: "•";
     transform: translateY(-2px);
   }
 
