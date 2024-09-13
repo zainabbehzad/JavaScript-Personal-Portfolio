@@ -33,6 +33,16 @@ nav {
   align-items: center;
 }
 
+.mainMenu {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
 nav .mainMenu {
   height: 329px;
   width: 196px;
@@ -81,6 +91,11 @@ nav .mainMenu {
   font-size: 30px;
   text-decoration: none;
   margin-right: 40px;
+}
+
+.mainMenu li a {
+  text-decoration: none;
+  color: #333;
 }
 
 nav .mainMenu li a {
@@ -163,27 +178,12 @@ nav .mainMenu li a:hover {
   display: block;
 }
 
-.mainMenu {
-  display: none;
-  flex-direction: column;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  background-color: #f1f1f1;
-  width: 100%;
-}
-
 .mainMenu.open {
   display: flex;
 }
 
 .mainMenu li {
   padding: 10px;
-}
-
-.mainMenu li a {
-  text-decoration: none;
-  color: #333;
 }
 
 .content {
@@ -203,7 +203,6 @@ nav .mainMenu li a:hover {
   text-align: center;
   background-color: #e9e9e9;
   width: 100vw;
-  text-align: end;
   height: auto;
 }
 
@@ -216,7 +215,7 @@ h5 {
 .web-developer-heading span {
   display: flex;
   height: 31px;
-  padding: 2px, 11px;
+  padding: 2px 11px;
   color: #fff;
   background-color: #175089;
   width: 129px;
@@ -358,7 +357,7 @@ h5 {
   height: 40px;
   font-size: 18px;
   font-weight: 700;
-  Padding: 8px, 18px, 8px, 18px;
+  padding: 8px, 18px, 8px, 18px;
 }
 
 .skills-section {
@@ -419,7 +418,6 @@ h5 {
 .soft-skills-section ul,
 .technical-skills-section ul {
   list-style-type: none;
-  
 }
 
 .soft-skills-section ul li::before,
@@ -880,6 +878,11 @@ h5 {
     margin-bottom: 15px;
   }
 
+  .project p {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
   .side-navbar a > p {
     margin-left: 10vw;
   }
@@ -1064,7 +1067,6 @@ h5 {
     color: #fff;
     background-color: #175089;
     margin-bottom: 80px;
- 
   }
 
   .hire-me-button {
@@ -1213,10 +1215,6 @@ h5 {
     font-weight: 700;
   }
 
-  .soft-skills-section {
-    margin-left: 20%;
-  }
-
   .hi2 {
     text-align: center;
     color: #175089;
@@ -1239,15 +1237,15 @@ h5 {
     margin-left: -40%;
   }
 
-  .soft-skills-section li{
-    margin-left: 40%;
+  .soft-skills-section li {
+    margin-left: 25%;
     font-weight: 700;
     font-size: 12px;
     white-space: nowrap;
   }
 
   .technical-skills-section li {
-    margin-left: 50px;
+    margin-left: 70px;
     font-weight: 700;
     font-size: 12px;
     white-space: nowrap;
@@ -1292,11 +1290,10 @@ h5 {
     content: '';
     position: absolute;
     top: 90px;
-    right: -1.5px;
     width: 1.5px;
     height: 60%;
     background-color: #175089;
-    right: -20%;
+    right: -25%;
   }
 
   .skills-containerme {
@@ -1306,8 +1303,6 @@ h5 {
     width: 40%;
     margin-left: 70%;
   }
-
-  
 
   .skills-container {
     display: none;
@@ -1358,11 +1353,6 @@ h5 {
     text-align: center;
     font-size: 16px;
     margin-bottom: 15px;
-  }
-
-  .project p {
-    font-weight: 500;
-    font-size: 12px;
   }
 
   .project img {
