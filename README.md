@@ -9,7 +9,7 @@
 ![Screenshot (140)](https://github.com/user-attachments/assets/843ba10c-09ba-49c5-af92-57cfa72291da)
 
 
-Live Demo [https://zainabbehzad.github.io/JavaScript-Personal-Portfolio/]
+Live Demo [ https://zainabbehzad.github.io/JavaScript-Personal-Portfolio/]
 
 
 ## Technologies and Tools Used 🛠️
