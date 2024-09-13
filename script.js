@@ -461,40 +461,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadFormData();
 
-  [nameInput, emailInput, messageTextarea].forEach(input => {
-      input.addEventListener('input', saveFormData);
+  [nameInput, emailInput, messageTextarea].forEach((input) => {
+    input.addEventListener('input', saveFormData);
   });
 
   form.addEventListener('submit', (event) => {
-      event.preventDefault();
+    event.preventDefault();
 
-      if (validateForm()) {
-          fetch('https://formspree.io/f/xpwaerqw', {
-              method: 'POST',
-              headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                  name: nameInput.value.trim(),
-                  email: emailInput.value.trim().toLowerCase(),
-                  message: messageTextarea.value.trim(),
-              }),
-          })
-          .then(response => {
-              if (response.ok) {
-                  alert('Thank you for your message!');
-                  form.reset();
-                  localStorage.removeItem('formData');
-              } else {
-                  throw new Error('Submission failed.');
-              }
-          })
-          .catch(error => {
-              errorMessage.textContent = 'There was a problem with your submission: ' + error.message;
-              errorMessage.style.display = 'block';
-          });
-      }
+    if (validateForm()) {
+      fetch('https://formspree.io/f/xpwaerqw', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim().toLowerCase(),
+          message: messageTextarea.value.trim(),
+        }),
+      })
+        .then(response => {
+          if (response.ok) {
+            alert('Thank you for your message!');
+            form.reset();
+            localStorage.removeItem('formData');
+          } else {
+            throw new Error('Submission failed.');
+          }
+        })
+        .catch(error => {
+          errorMessage.textContent = 'There was a problem with your submission: ' + error.message;
+          errorMessage.style.display = 'block';
+        });
+    }
   });
 });
 
